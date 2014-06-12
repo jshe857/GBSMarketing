@@ -1,0 +1,36 @@
+/* Reset CSS */
+a,abbr,address,article,aside,audio,b,blockquote,body,canvas,caption,cite,code,dd,del,details,dfn,dialog,div,dl,dt,em,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,p,pre,q,samp,section,small,span,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,ul,var,video
+	{
+	margin: 0;
+	padding: 0;
+}
+
+/* Worklight container div */
+
+
+.pane {
+	background: #F7F7F7 !important; 
+}
+
+.col .card .item {
+	text-align: center;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic,
+		"AppleGothic", sans-serif;
+	font-size: 30px;
+	font-weight:500;
+}
+.bar .title{
+font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;	font-weight: 700;
+	font-style: italic;
+	font-size: 30px;
+}
+.start {
+	position: fixed;
+	top: 30%;
+}
+
+.select {
+	position:absolute;
+	top:30%;
+	width: 90%;
+}

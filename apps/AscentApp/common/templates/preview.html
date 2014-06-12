@@ -1,0 +1,31 @@
+<ion-view title="{{title}} - results: {{numResults}} ">
+<ion-content has-header="true" has-subheader="true">
+
+<div class="row"  ng-repeat="row in list">
+	<div class="col">
+		<div class="card">
+			<div class="item">
+				<iframe ng-src="{{getUrl(row.url)}}" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="item">{{row.title}}</div>
+		</div>
+	</div>	
+	<div class="col">
+		<div class="card">
+			<div class="item">
+				<iframe ng-src="{{getUrl(row.url)}}" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="item">{{row.title}}</div>
+		</div>
+	</div>	
+	<div class="col">
+		<div class="card">
+			<div class="item">
+				<iframe ng-src="{{getUrl(row.url)}}" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="item">{{row.title}}</div>
+		</div>
+	</div>	
+</div>
+</ion-content>
+</ion-view>
