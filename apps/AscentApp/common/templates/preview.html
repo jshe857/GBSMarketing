@@ -5,7 +5,7 @@
 	<div class="col">
 		<div class="card">
 			<div class="item">
-				<iframe ng-src="{{getUrl(row.url)}}" frameborder="0" allowfullscreen></iframe>
+				<iframe height=30% ng-src="{{getUrl(row.url)}}" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<div class="item">{{row.title}}</div>
 		</div>
@@ -13,7 +13,7 @@
 	<div class="col">
 		<div class="card">
 			<div class="item">
-				<iframe ng-src="{{getUrl(row.url)}}" frameborder="0" allowfullscreen></iframe>
+				<img class="full-image" ng-src="{{getImage(row.url)}}">	
 			</div>
 			<div class="item">{{row.title}}</div>
 		</div>
@@ -21,7 +21,7 @@
 	<div class="col">
 		<div class="card">
 			<div class="item">
-				<iframe ng-src="{{getUrl(row.url)}}" frameborder="0" allowfullscreen></iframe>
+				<img class="full-image" ng-src="{{getImage(row.url)}}">			
 			</div>
 			<div class="item">{{row.title}}</div>
 		</div>

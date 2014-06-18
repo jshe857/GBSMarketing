@@ -17,9 +17,13 @@ ascent
 									tx
 											.executeSql('CREATE TABLE IF NOT EXISTS DEMO (url unique, title, c BIT,a BIT,m BIT,s BIT,bank BIT, govt BIT, telecom BIT, mine BIT)');
 									tx
-											.executeSql('INSERT INTO DEMO (url, title,c,a,m,s,bank,govt,telecom,mine) VALUES ("//www.youtube.com/embed/jQvNfPTQMkk", "What is IBM?",1,1,1,1,1,1,1,1)');
+											.executeSql('INSERT INTO DEMO (url, title,c,a,m,s,bank,govt,telecom,mine) VALUES ("1AePeB7iCpI", "IBM Big Data in a Minute",0,1,0,0,1,1,1,1)');
 									tx
-											.executeSql('INSERT INTO DEMO (url, title,c,a,m,s,bank,govt,telecom,mine) VALUES ("//www.youtube.com/embed/1AePeB7iCpI", "IBM Big Data in a Minute",0,1,0,0,1,1,1,1)');
+											.executeSql('INSERT INTO DEMO (url, title,c,a,m,s,bank,govt,telecom,mine) VALUES ("ZFLLER32pQE", "Mobile Enterprise",0,0,1,0,1,1,1,1)');
+									tx
+											.executeSql('INSERT INTO DEMO (url, title,c,a,m,s,bank,govt,telecom,mine) VALUES ("xc4mQc3CW5c", "IBM Cloud marketplace",1,0,0,0,1,1,1,1)');
+									tx
+											.executeSql('INSERT INTO DEMO (url, title,c,a,m,s,bank,govt,telecom,mine) VALUES ("jQvNfPTQMkk", "What is IBM?",1,1,1,1,1,1,1,1)');
 								};
 								var queryDB = function(tx) {
 									tx.executeSql('SELECT * FROM DEMO WHERE ' + searchColumn + '=1', [],
