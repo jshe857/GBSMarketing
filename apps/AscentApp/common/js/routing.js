@@ -17,6 +17,10 @@ var ascent = angular.module('Ascent', [ 'ionic']).config(
 						url:'/search?searchKey&title',
 						templateUrl : 'templates/preview.html',
 						controller : 'PreviewCtrl'
+					}).state('details', {
+						url:'/details?mediaId',
+						templateUrl : 'templates/details.html',
+						controller : 'DetailsCtrl'
 					});
 					$urlRouterProvider.otherwise('/start');
 				} ]);

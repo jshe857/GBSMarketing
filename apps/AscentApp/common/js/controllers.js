@@ -1,11 +1,12 @@
-
-
 ascent.controller('MainCtrl', function($scope, $rootScope, DBService, SearchStore) {
 	var db = new DBService();
 	db.insertMock();
 	$scope.db = db;
 	$scope.search = function(buttonText) {
 		SearchStore.search(buttonText);
+	};
+	$scope.getImage = function(url){
+		return 'http://img.youtube.com/vi/'+url+ '/0.jpg';
 	};
 }).controller('StartCtrl', function($scope,$state) {
 	$scope.filterby = function(filter) {
@@ -25,16 +26,21 @@ ascent.controller('MainCtrl', function($scope, $rootScope, DBService, SearchStor
 	$scope.filter='<i class="icon ion-person"></i>Industry';
 	
 
-}).controller('PreviewCtrl', function($scope,$sce,$stateParams) {
+}).controller('PreviewCtrl', function($scope,$state,$stateParams) {
 	$scope.db.queryKey($stateParams.searchKey);
 	$scope.title=$stateParams.title;
-	$scope.getUrl = function(url) {
-		return $sce.trustAsResourceUrl('//www.youtube.com/embed/'+url);
-	};
-	$scope.getImage = function(url){
-		return 'http://img.youtube.com/vi/'+url+ '/0.jpg';
-	};
+
 	$scope.getDetails = function(row) {
-		console.log(row);
+		
+		$state.go('details',{mediaId:row.url});
+	};
+}).controller('DetailsCtrl', function($scope,$stateParams,$sce) {	
+	$scope.db.queryMedia($stateParams.mediaId);
+	console.log($scope.l);
+	$scope.getUrl = function() {
+		return $sce.trustAsResourceUrl('//www.youtube.com/embed/'+$scope.focusRow.url);
+	};
+	$scope.getHackUrl = function() {
+		return $sce.trustAsResourceUrl('//www.youtube.com/embed/'+$stateParams.mediaId);
 	};
 });

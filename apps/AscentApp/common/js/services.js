@@ -6,6 +6,7 @@ ascent
 								this.db = window.openDatabase("Database",
 										"1.0", "Cordova Demo", 200000);
 								var searchColumn = "1";
+								var url ="";
 								var errorCB = function(err) {
 									console.log("Error processing SQL: "
 											+ err.code);
@@ -30,24 +31,28 @@ ascent
 								};
 								var queryDB = function(tx) {
 									tx.executeSql('SELECT * FROM DEMO WHERE ' + searchColumn + '=1', [],
-											querySuccess, errorCB);
+											addToList, errorCB);
 								};
 
-								var querySuccess = function(tx, results) {
+								var addToList = function(tx, results) {
 									$rootScope.list = new Array();
-									var len = results.rows.length;
-									$rootScope.numResults = len;
-									console.log("DEMO table: " + len
-											+ " rows found.");
-									for (var i = 0; i < len; i++) {
-//										console.log(results.rows.item(i));
+									for (var i = 0; i < results.rows.length; i++) {
 										$rootScope.$apply(function() {
 											$rootScope.list.push(results.rows
 													.item(i));
 										});
 									}
 								};
-
+								var getRow = function(tx) {
+									tx.executeSql('SELECT * FROM DEMO WHERE url="'+url+'"', [],
+											setFocusRow, errorCB);
+								};
+								var setFocusRow = function (tx,results) {
+									$rootScope.$apply(function() {
+										$rootScope.focusRow = results.rows.item(0);
+										console.log($rootScope.focusRow);
+									});
+								};
 								this.queryAll = function() {
 									searchColumn = "1";
 									this.db.transaction(queryDB, errorCB);
@@ -56,9 +61,14 @@ ascent
 									searchColumn = key;
 									this.db.transaction(queryDB,errorCB);
 								};
+								this.queryMedia = function(id) {
+									url=id;
+									this.db.transaction(getRow,errorCB);
+								};
 								this.insertMock = function() {
 									this.db.transaction(populateDB, errorCB);
 								};
+
 
 							};
 							return operations;
