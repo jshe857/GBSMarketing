@@ -1,12 +1,17 @@
-ascent.controller('MainCtrl', function($scope, $rootScope, DBService) {
+
+
+ascent.controller('MainCtrl', function($scope, $rootScope, DBService, SearchStore) {
 	var db = new DBService();
 	db.insertMock();
 	$scope.db = db;
-}).controller('StartCtrl', function($scope,$location) {
-	$scope.filterby = function(filter) {
-		$location.path('/' + filter);
+	$scope.search = function(buttonText) {
+		SearchStore.search(buttonText);
 	};
-}).controller('CAMSCtrl', function($scope){
+}).controller('StartCtrl', function($scope,$state) {
+	$scope.filterby = function(filter) {
+		$state.go(filter);
+	};
+}).controller('CAMSCtrl', function($scope,$state){
 	$scope.button1 = 'Cloud';
 	$scope.button2 = 'Analytics';
 	$scope.button3 = 'Mobile';
@@ -18,47 +23,18 @@ ascent.controller('MainCtrl', function($scope, $rootScope, DBService) {
 	$scope.button3 = 'Telecommunications';
 	$scope.button4 = 'Mining';
 	$scope.filter='<i class="icon ion-person"></i>Industry';
-}).controller('PreviewCtrl', function($scope,$sce) {
-	$scope.db.queryKey('c');
+	
+
+}).controller('PreviewCtrl', function($scope,$sce,$stateParams) {
+	$scope.db.queryKey($stateParams.searchKey);
+	$scope.title=$stateParams.title;
 	$scope.getUrl = function(url) {
-		console.log(url);
-		return $sce.trustAsResourceUrl(url);
+		return $sce.trustAsResourceUrl('//www.youtube.com/embed/'+url);
 	};
-}).controller('CCtrl', function($scope,$sce) {
-	$scope.db.queryKey('c');
-	$scope.title='Cloud';
-	$scope.getUrl = function(url) {
-		return $sce.trustAsResourceUrl('//www.youtube.com/embed/' + url);
-	}; 
 	$scope.getImage = function(url){
-		return 'http://img.youtube.com/vi/'+url + '/0.jpg';
+		return 'http://img.youtube.com/vi/'+url+ '/0.jpg';
 	};
-}).controller('ACtrl', function($scope,$sce) {
-	$scope.title='Analytics';
-	$scope.db.queryKey('a');
-	$scope.getUrl = function(url) {
-		return $sce.trustAsResourceUrl('//www.youtube.com/embed/' + url);
-	}; 
-	$scope.getImage = function(url){
-		return 'http://img.youtube.com/vi/'+url + '/0.jpg';
-	};
-}).controller('MCtrl', function($scope,$sce) {
-	$scope.title='Mobile';
-	$scope.db.queryKey('m');
-	$scope.getUrl = function(url) {
-		return $sce.trustAsResourceUrl('//www.youtube.com/embed/' + url);
-	}; 
-	$scope.getImage = function(url){
-		return 'http://img.youtube.com/vi/'+url + '/0.jpg';
-	};
-}).controller('SCtrl', function($scope,$sce) {
-	$scope.title='Social';
-	$scope.db.queryKey('s');
-	$scope.getUrl = function(url) {
-		return $sce.trustAsResourceUrl('//www.youtube.com/embed/' + url);
-	}; 
-	$scope.getImage = function(url){
-		return 'http://img.youtube.com/vi/'+url + '/0.jpg';
+	$scope.getDetails = function(row) {
+		console.log(row);
 	};
 });
-

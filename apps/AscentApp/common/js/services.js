@@ -1,8 +1,6 @@
 ascent
 		.factory(
 				'DBService',
-				[
-						'$rootScope',
 						function($rootScope) {
 							var operations = function() {
 								this.db = window.openDatabase("Database",
@@ -24,6 +22,11 @@ ascent
 											.executeSql('INSERT INTO DEMO (url, title,c,a,m,s,bank,govt,telecom,mine) VALUES ("xc4mQc3CW5c", "IBM Cloud marketplace",1,0,0,0,1,1,1,1)');
 									tx
 											.executeSql('INSERT INTO DEMO (url, title,c,a,m,s,bank,govt,telecom,mine) VALUES ("jQvNfPTQMkk", "What is IBM?",1,1,1,1,1,1,1,1)');
+									tx
+											.executeSql('INSERT INTO DEMO (url, title,c,a,m,s,bank,govt,telecom,mine) VALUES ("rB7VkrUYCAg", "IBM Watson Group Launch",1,1,0,0,1,1,1,1)');								
+									tx
+											.executeSql('INSERT INTO DEMO (url, title,c,a,m,s,bank,govt,telecom,mine) VALUES ("Q3e4q2wTOOQ", "Cognitive Computing",1,1,0,0,1,1,1,1)');								
+									
 								};
 								var queryDB = function(tx) {
 									tx.executeSql('SELECT * FROM DEMO WHERE ' + searchColumn + '=1', [],
@@ -59,4 +62,19 @@ ascent
 
 							};
 							return operations;
-						} ]);
+						}).factory('SearchStore',function($state) {
+							var obj = {
+									'Cloud': 'c',
+									'Analytics': 'a',
+									'Mobile' : 'm',
+									'Social' : 's',
+									'Banking' : 'bank',
+									'Government': 'govt',
+									'Telecommunications' : 'telecom',
+									'Mining' : 'mine'
+							};
+							obj.search = function(category) {
+								$state.go('search',{searchKey:this[category] , title: category});
+							}
+							return obj;
+						});
