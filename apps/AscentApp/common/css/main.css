@@ -19,12 +19,14 @@ body {
 .col .card .item {
 	text-align: center;
 	font-size: 30px;
+	font-size:2.8vw;
 	font-weight:500;
 }
 
 .col-20.card .item {
 	text-align: center;
 	font-size:17px;
+/* 	font-size:1vw; */
 	font-weight:700;
 }
 .item h1 {
@@ -46,6 +48,7 @@ body {
 font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;	font-weight: 700;
 	font-style: italic;
 	font-size: 30px;
+	
 }
 
 .start {
@@ -60,6 +63,6 @@ font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", G
 }
 
 .overflow-scroll .scroll {
-	height:70%;
+	height:auto;
 }
 

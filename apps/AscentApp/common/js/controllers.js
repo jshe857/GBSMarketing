@@ -26,10 +26,17 @@ ascent.controller('MainCtrl', function($scope, $rootScope, DBService, SearchStor
 	$scope.filter='<i class="icon ion-person"></i>Industry';
 	
 
-}).controller('PreviewCtrl', function($scope,$state,$stateParams) {
+}).controller('PreviewCtrl', function($scope,$state,$stateParams,$window) {
 	$scope.db.queryKey($stateParams.searchKey);
 	$scope.title=$stateParams.title;
-
+	$scope.decideColumnWidth = function() {
+		console.log($window.innerWidth);
+		if ($window.innerWidth > 700) {
+			return 'col-20';
+		} else {
+			return 'col-33';
+		}
+	};
 	$scope.getDetails = function(row) {
 		
 		$state.go('details',{mediaId:row.url});

@@ -2,7 +2,7 @@
   <ion-content
   has-header="true" overflow-scroll="true">
     <div class="list" style="padding-top:40px;">
-      <div style="height:100px; overflow:hidden">
+      <div style="height:18%; overflow:hidden">
         <img style="margin-top:-60px" class="full-image" src="images/articles/dials.png">
       </div>
       <div class="item item-body">
@@ -23,7 +23,7 @@
       <div class=item>
         <ion-scroll direction="x">
           <div class="row">
-            <div class="card col-20" ng-click="getDetails(row)" ng-repeat="row in list">
+            <div class="card" ng-class="decideColumnWidth()" ng-click="getDetails(row)" ng-repeat="row in list">
               <img class="full-image" ng-src="{{getImage(row.url)}}">
               <div class="item">
                 {{row.title}}
@@ -40,7 +40,7 @@
       <div class=item>
         <ion-scroll direction="x">
           <div class="row">
-            <div class="card col-20" ng-repeat="row in list">
+            <div class="card" ng-class="decideColumnWidth()" ng-repeat="row in list">
               <img class="full-image" ng-src="{{getImage(row.url)}}">
               <div class="item">
                 {{row.title}}
@@ -50,29 +50,5 @@
           </ion-scroll>
       </div>
       </div>
-      <div class="list" style="padding-top:30px;">
-      <div class="item item-divider">
-        Segment Three
-      </div>
-      <div class=item>
-        <ion-scroll direction="x">
-          <div class="row">
-            <div class="card col-20" ng-repeat="row in list">
-              <img class="full-image" ng-src="{{getImage(row.url)}}">
-              <div class="item">
-                {{row.title}}
-                                			<div style="float:right">
-			<i class="icon ion-cloud"></i>
-			<i class="icon ion-ios7-calculator"></i>
-			</br>
-			<i class="icon ion-iphone"></i>
-			<i class="icon ion-ios7-people"></i>
-			</div>
-              </div>
-            </div>
-          </div>
-        </ion-scroll>
-      </div>
-    </div>
    </ion-content>
 </ion-view>
