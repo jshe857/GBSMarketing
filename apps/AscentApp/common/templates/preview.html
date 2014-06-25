@@ -23,13 +23,34 @@
       <div class=item>
         <ion-scroll direction="x">
           <div class="row">
-            <div class="card" ng-class="decideColumnWidth()" ng-click="getDetails(row)" ng-repeat="row in list">
-              <img class="full-image" ng-src="{{getImage(row.url)}}">
-              <div class="item">
-                {{row.title}}
-              </div>
-            </div>
-          </div>
+
+			<div class="card" ng-class="decideColumnWidth()"
+				ng-click="getDetails(row)" ng-repeat="row in list">
+
+				<img class="full-image" ng-src="{{getImage(row.url)}}">
+				<div class="item">
+
+					{{row.title}}
+					<div style="">
+						<div>
+							<span style="background: #31CCB0"> <i
+								class="icon ion-cloud"></i>
+							</span> <span style="background: #3996D5"> <i
+								class="icon ion-search"></i>
+							</span>
+<!-- 						</div> -->
+<!-- 						<div> -->
+							<span style="background: #EF746D"> <i
+								class="icon ion-iphone"></i>
+							</span> <span style="background: #FACF8D"> <i
+								class="icon ion-person-stalker"></i>
+							</span>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
         </ion-scroll>
       </div>
       </div>

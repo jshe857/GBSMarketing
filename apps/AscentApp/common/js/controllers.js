@@ -30,7 +30,6 @@ ascent.controller('MainCtrl', function($scope, $rootScope, DBService, SearchStor
 	$scope.db.queryKey($stateParams.searchKey);
 	$scope.title=$stateParams.title;
 	$scope.decideColumnWidth = function() {
-		console.log($window.innerWidth);
 		if ($window.innerWidth > 700) {
 			return 'col-20';
 		} else {
@@ -43,7 +42,7 @@ ascent.controller('MainCtrl', function($scope, $rootScope, DBService, SearchStor
 	};
 }).controller('DetailsCtrl', function($scope,$stateParams,$sce) {	
 	$scope.db.queryMedia($stateParams.mediaId);
-	console.log($scope.l);
+	$scope.mediaId = $stateParams.mediaId;
 	$scope.getUrl = function() {
 		return $sce.trustAsResourceUrl('//www.youtube.com/embed/'+$scope.focusRow.url);
 	};

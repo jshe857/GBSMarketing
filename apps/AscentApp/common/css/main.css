@@ -29,6 +29,13 @@ body {
 /* 	font-size:1vw; */
 	font-weight:700;
 }
+
+.col-33.card .item {
+	text-align: center;
+	font-size:17px;
+/* 	font-size:1vw; */
+	font-weight:700;
+}
 .item h1 {
 	font-weight:700;
 	letter-spacing:2px
@@ -48,7 +55,12 @@ body {
 font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;	font-weight: 700;
 	font-style: italic;
 	font-size: 30px;
-	
+}
+
+.article-header {
+	font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;	font-weight: 700;
+	font-style: italic;
+	font-size: 30px;
 }
 
 .start {
@@ -64,5 +76,15 @@ font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", G
 
 .overflow-scroll .scroll {
 	height:auto;
+}
+
+.item span {
+	display:inline-block;
+	width: 1.5vw;
+	text-align:center;
+	font-size:1.5vw;
+	color:#FFF;
+	border-radius:20%;
+	
 }
 
