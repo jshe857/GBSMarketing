@@ -18,7 +18,7 @@ var ascent = angular.module('Ascent', [ 'ionic']).config(
 						templateUrl : 'templates/preview.html',
 						controller : 'PreviewCtrl'
 					}).state('details', {
-						url:'/details?mediaId',
+						url:'/details?media',
 						templateUrl : 'templates/details.html',
 						controller : 'DetailsCtrl'
 					});

@@ -5,8 +5,11 @@ ascent.controller('MainCtrl', function($scope, $rootScope, DBService, SearchStor
 	$scope.search = function(buttonText) {
 		SearchStore.search(buttonText);
 	};
-	$scope.getImage = function(url){
-		return 'http://img.youtube.com/vi/'+url+ '/0.jpg';
+	$scope.getImage = function(id){
+		return 'http://img.youtube.com/vi/'+id+ '/0.jpg';
+	};
+	$scope.getUrl = function(id) {
+		return '//www.youtube.com/embed/'+id;
 	};
 }).controller('StartCtrl', function($scope,$state) {
 	$scope.filterby = function(filter) {
@@ -26,7 +29,7 @@ ascent.controller('MainCtrl', function($scope, $rootScope, DBService, SearchStor
 	$scope.filter='<i class="icon ion-person"></i>Industry';
 	
 
-}).controller('PreviewCtrl', function($scope,$state,$stateParams,$window) {
+}).controller('PreviewCtrl', function($scope,$state,$stateParams,$window,$rootScope) {
 	$scope.db.queryKey($stateParams.searchKey);
 	$scope.title=$stateParams.title;
 	$scope.decideColumnWidth = function() {
@@ -36,17 +39,11 @@ ascent.controller('MainCtrl', function($scope, $rootScope, DBService, SearchStor
 			return 'col-33';
 		}
 	};
-	$scope.getDetails = function(row) {
-		
-		$state.go('details',{mediaId:row.url});
+	
+	$scope.getDetails = function(row) {	
+		console.log(JSON.stringify(row));
+		$state.go('details',{media: JSON.stringify(row)});
 	};
-}).controller('DetailsCtrl', function($scope,$stateParams,$sce) {	
-	$scope.db.queryMedia($stateParams.mediaId);
-	$scope.mediaId = $stateParams.mediaId;
-	$scope.getUrl = function() {
-		return $sce.trustAsResourceUrl('//www.youtube.com/embed/'+$scope.focusRow.url);
-	};
-	$scope.getHackUrl = function() {
-		return $sce.trustAsResourceUrl('//www.youtube.com/embed/'+$stateParams.mediaId);
-	};
+}).controller('DetailsCtrl', function($scope,$stateParams) {
+	$scope.media = JSON.parse($stateParams.media);
 });

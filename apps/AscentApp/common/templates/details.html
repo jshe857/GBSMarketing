@@ -1,11 +1,11 @@
 <ion-view title="David Jones" hide-nav-bar="true">
 <ion-content style="background:url(media/test/back.png) repeat">
-<div class="row responsive-md">
-	<div class="card col" style="text-align:center">
-			<img class="full-image"  ng-src="media/test/body.png">
-	</div>
+<div class="row responsive-md" style="padding-top:20px">
+	<a class="card col media" ng-href="{{getUrl(media.id)}}">
+			<img class="play-icon" width="250px" src="images/play.png">
+	</a>
 	<div class="col col-33">
-		<ion-scroll scrollbar-y="false" style="max-height:90%">
+		<ion-scroll scrollbar-y="false" style="max-height:95%;">
 		<div style="height:10px; background:#ABCDEF; margin: 20px 0 20px 0"></div>
 		<div style="text-align:center">
 			<img ng-src="media/test/logo.png" width="50%">

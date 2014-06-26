@@ -82,9 +82,28 @@ font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", G
 	display:inline-block;
 	width: 1.5vw;
 	text-align:center;
-	font-size:1.5vw;
+	font-size:1.3vw;
 	color:#FFF;
 	border-radius:20%;
 	
 }
+
+.media {
+	position: relative;
+	text-align:center;
+	background:black;
+	background-image: url('../media/test/body.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% auto;
+	height:80%;
+}
+
+.play-icon {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;}
 
