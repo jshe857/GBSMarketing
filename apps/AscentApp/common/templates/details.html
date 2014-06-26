@@ -1,26 +1,25 @@
-<ion-view title="David Jones" hide-nav-bar="true">
-<ion-content style="background:url(media/test/back.png) repeat">
+<ion-view hide-nav-bar="true">
+<ion-content style="background:url(media/test/crossword.png) repeat">
 <div class="row responsive-md" style="padding-top:20px">
-	<a class="card col media" ng-href="{{getUrl(media.id)}}">
+	<a class="card col media" ng-style="setBackground()" ng-href="{{getUrl(media.id)}}">
 			<img class="play-icon" width="250px" src="images/play.png">
 	</a>
 	<div class="col col-33">
 		<ion-scroll scrollbar-y="false" style="max-height:95%;">
 		<div style="height:10px; background:#ABCDEF; margin: 20px 0 20px 0"></div>
 		<div style="text-align:center">
-			<img ng-src="media/test/logo.png" width="50%">
+			<img ng-src="{{'media/'+media.id+'/logo.png'}}" width="50%">
 		</div>
 		<div style="height:2px; background:#BBB; margin: 20px 0 0 0"></div>
 		<div>
 		<div style='padding: 15px 0 15px 0; text-align:center' class="article-header">
-			Adding Clicks to Bricks
+			{{media.title}}
 		</div>
 		<div style="height:2px; background:#BBB; text-align:justify; margin: 0 0 20px 0"></div>
 		<p>
 		Learn how IBM helped David Jones put today's connected consumer at the centre of every interaction.
 This was a total digital transformation, an overhaul of both technical and physical infrastructure, a realignment of process and an investment in their people and skill set.
 The result? A single, seamless customer experience across every channel and device, plus solid foundations for advanced analytics to deliver deeper understanding of channel activity and allow highly personalised communications.
-
 		</p>
 		</div>
 		</ion-scroll>

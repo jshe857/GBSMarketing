@@ -1,11 +1,14 @@
-ascent.controller('MainCtrl', function($scope, $rootScope, DBService, SearchStore) {
-	var db = new DBService();
-	db.insertMock();
-	$scope.db = db;
+ascent.controller('MainCtrl', function($scope, $http, DBService, SearchStore) {
+	$http.get("insert.json").success(function(data) {
+		var db = new DBService();
+		db.insertData(data);
+		$scope.db = db;
+	});
 	$scope.search = function(buttonText) {
 		SearchStore.search(buttonText);
 	};
 	$scope.getImage = function(id){
+		console.log(id);
 		return 'http://img.youtube.com/vi/'+id+ '/0.jpg';
 	};
 	$scope.getUrl = function(id) {
@@ -45,5 +48,11 @@ ascent.controller('MainCtrl', function($scope, $rootScope, DBService, SearchStor
 		$state.go('details',{media: JSON.stringify(row)});
 	};
 }).controller('DetailsCtrl', function($scope,$stateParams) {
-	$scope.media = JSON.parse($stateParams.media);
+	$scope.media = angular.fromJson($stateParams.media);
+	console.log($scope.media);
+	$scope.setBackground = function() {
+		var url = "media/" +$scope.media.id + "/body.png";
+		return {'background-image':'url("' + url+'")'};
+	};
+
 });

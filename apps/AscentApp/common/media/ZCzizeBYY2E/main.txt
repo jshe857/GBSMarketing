@@ -1,0 +1,2 @@
+To enable banking across South Africa, First National Bank turned to IBM for an innovative platform. By leveraging the mainframe and IMS, FNB was the first to bring mobile banking app to South Africa resulting in the adoption of millions of new customers.
+

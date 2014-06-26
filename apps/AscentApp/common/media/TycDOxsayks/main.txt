@@ -1,0 +1,5 @@
+XO Communications is one of the largest communications service providers in the United States, offering a comprehensive portfolio of communications, network and hosted IT services through a 19,000- mile nationwide inter-city network and over 1,000 office locations. 
+
+In the intensely competitive telecommunications industry, it costs much less to retain existing customers than to acquire new ones. XO Communications needed a way to identify customers who are at the highest risk of “churn”, taking preventive actions, contacting high-risk customers before they decide to make a switch to another carrier. 
+
+By bringing together many different groups within the organization, XO is able to develop data solutions, and analytics solutions on one platform and move it throughout the organization which helps them solve problems faster, and it also helps they to serve their customers better.
