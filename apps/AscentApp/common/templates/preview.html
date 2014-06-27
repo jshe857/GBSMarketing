@@ -24,24 +24,24 @@ Thus, to put cloud computing in the proper context, keep in mind that in the DNA
               <img class="full-image" ng-src="{{getImage(row.id)}}">
               <div class="item">
                 {{row.title}}
-                <div style="">
-                  <div>
-                    <span ng-if="row.c" style="background: #3996D5">   
+                <div>
+                  <div style="height:20px">
+                    <span ng-show="row.c" style="background: #3996D5">   
                       <i
                       class="icon ion-cloud">  
                       </i>
                     </span>
-                    <span ng-if="row.a" style="background: #FACF8D">         
+                    <span ng-show="row.a" style="background: #FACF8D">         
                       <i
                       class="icon ion-search"> 
                       </i>
                     </span>
-                    <span ng-if="row.m" style="background: #EF746D">  
+                    <span ng-show="row.m" style="background: #EF746D">  
                       <i
                       class="icon ion-iphone" >                
                       </i>
                     </span>                
-                    <span ng-if="row.s" style="background: #31CCB0">
+                    <span ng-show="row.s" style="background: #31CCB0">
                       <i
                       class="icon ion-person-stalker">
                       </i>
