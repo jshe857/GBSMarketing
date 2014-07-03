@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true">
+<ion-view title="{{title}}">
   <ion-content has-header="true" overflow-scroll="true">
     <div class="list" style="padding-top: 40px;">
       <div class="item banner">
@@ -26,22 +26,22 @@ Thus, to put cloud computing in the proper context, keep in mind that in the DNA
                 {{row.title}}
                 <div>
                   <div style="height:20px">
-                    <span ng-show="row.c" style="background: #3996D5">   
+                    <span class="icon-span" ng-show="row.c" style="background: #3996D5">   
                       <i
                       class="icon ion-cloud">  
                       </i>
                     </span>
-                    <span ng-show="row.a" style="background: #FACF8D">         
+                    <span class="icon-span" ng-show="row.a" style="background: #FACF8D">         
                       <i
                       class="icon ion-search"> 
                       </i>
                     </span>
-                    <span ng-show="row.m" style="background: #EF746D">  
+                    <span class="icon-span" ng-show="row.m" style="background: #EF746D">  
                       <i
                       class="icon ion-iphone" >                
                       </i>
                     </span>                
-                    <span ng-show="row.s" style="background: #31CCB0">
+                    <span class="icon-span" ng-show="row.s" style="background: #31CCB0">
                       <i
                       class="icon ion-person-stalker">
                       </i>

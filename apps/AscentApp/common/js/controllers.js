@@ -1,18 +1,23 @@
-ascent.controller('MainCtrl', function($scope, $http, DBService, SearchStore) {
+ascent.controller('MainCtrl', function($scope, $http, DBService, SearchStore,$sce,$ionicModal) {
 	$http.get("insert.json").success(function(data) {
 		var db = new DBService();
 		db.insertData(data);
 		$scope.db = db;
 	});
+	 $ionicModal.fromTemplateUrl('templates/dataform.html', function(modal) {
+		    $scope.modal = modal;
+		  }, {
+		    animation: 'slide-in-up',
+		    focusFirstInput: true
+	});
 	$scope.search = function(buttonText) {
 		SearchStore.search(buttonText);
 	};
 	$scope.getImage = function(id){
-		console.log(id);
 		return 'http://img.youtube.com/vi/'+id+ '/0.jpg';
 	};
 	$scope.getUrl = function(id) {
-		return '//www.youtube.com/embed/'+id;
+		return $sce.trustAsResourceUrl('http://www.youtube.com/embed/'+id);
 	};
 }).controller('StartCtrl', function($scope,$state) {
 	$scope.filterby = function(filter) {
@@ -55,4 +60,9 @@ ascent.controller('MainCtrl', function($scope, $http, DBService, SearchStore) {
 		return {'background-image':'url("' + url+'")'};
 	};
 
+}).controller('FormCtrl', function($scope, EmailService) {
+	$scope.client = {};
+	$scope.send = function(client) {
+		EmailService.send(client);
+	};
 });

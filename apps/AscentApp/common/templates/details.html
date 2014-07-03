@@ -1,9 +1,10 @@
-<ion-view hide-nav-bar="true">
+<ion-view>
 <ion-content style="background:url(media/test/crossword.png) repeat">
 <div class="row responsive-md" style="padding-top:20px">
-	<a class="card col media" ng-style="setBackground()" ng-href="{{getUrl(media.id)}}">
-			<img class="play-icon" width="250px" src="images/play.png">
-	</a>
+	<div class="card col media" ng-href="{{getUrl(media.id)}}" target="_self">
+<!-- 			<img class="play-icon" width="250px" src="images/play.png"> -->
+				<iframe width ="100%" height="100%" ng-src="{{getUrl(media.id)}}" allowfullscreen frameborder="0"></iframe>
+	</div>
 	<div class="col col-33">
 		<ion-scroll scrollbar-y="false" style="max-height:95%;">
 		<div style="height:10px; background:#ABCDEF; margin: 20px 0 20px 0"></div>
