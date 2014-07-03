@@ -98,10 +98,8 @@ EmailComposer.prototype = {
             if (typeof callbackFn == 'function') {
                 callbackFn.apply(scope || this, arguments);
             }
-        }
+        };
     }
 };
 
 var plugin = new EmailComposer();
-
-module.exports = plugin;
