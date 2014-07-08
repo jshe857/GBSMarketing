@@ -1,4 +1,4 @@
-ascent.controller('MainCtrl', function($scope, $http, DBService, SearchStore,$sce,$ionicModal) {
+ascent.controller('MainCtrl', function($scope, $http, DBService, SearchStore,$sce,$ionicModal,$ionicPopup) {
 	$http.get("insert.json").success(function(data) {
 		var db = new DBService();
 		db.insertData(data);
@@ -10,6 +10,7 @@ ascent.controller('MainCtrl', function($scope, $http, DBService, SearchStore,$sc
 		    animation: 'slide-in-up',
 		    focusFirstInput: true
 	});
+
 	$scope.search = function(buttonText) {
 		SearchStore.search(buttonText);
 	};
@@ -35,8 +36,6 @@ ascent.controller('MainCtrl', function($scope, $http, DBService, SearchStore,$sc
 	$scope.button3 = 'Telecommunications';
 	$scope.button4 = 'Mining';
 	$scope.filter='<i class="icon ion-person"></i>Industry';
-	
-
 }).controller('PreviewCtrl', function($scope,$state,$stateParams,$window,$rootScope) {
 	$scope.db.queryKey($stateParams.searchKey);
 	$scope.title=$stateParams.title;
@@ -47,14 +46,14 @@ ascent.controller('MainCtrl', function($scope, $http, DBService, SearchStore,$sc
 			return 'col-33';
 		}
 	};
-	
 	$scope.getDetails = function(row) {	
-		console.log(JSON.stringify(row));
 		$state.go('details',{media: JSON.stringify(row)});
 	};
-}).controller('DetailsCtrl', function($scope,$stateParams) {
+}).controller('DetailsCtrl', function($scope,$stateParams,$http) {
 	$scope.media = angular.fromJson($stateParams.media);
-	console.log($scope.media);
+	$http.get("media/"+$scope.media.id+"/main.txt").success(function(data){
+		$scope.media.body = data;
+	});
 	$scope.setBackground = function() {
 		var url = "media/" +$scope.media.id + "/body.png";
 		return {'background-image':'url("' + url+'")'};
