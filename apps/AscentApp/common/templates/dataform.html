@@ -22,8 +22,10 @@
 			Country *</span> <input type="text" required ng-model="client.country">
 			</label> 
 	</form>
+	<div style="text-align:center">
 	<button ng-disabled="!clientinfo.$valid"
-		class="button button-block button-stable"
+		class="button button-large button-positive" style="width:100%"
 		ng-click="send(client);modal.hide()">Send</button>
+	</div>
 </div>
 

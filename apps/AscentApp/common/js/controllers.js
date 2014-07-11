@@ -10,6 +10,12 @@ ascent.controller('MainCtrl', function($scope, $http, DBService, SearchStore,$sc
 		    animation: 'slide-in-up',
 		    focusFirstInput: true
 	});
+//	$scope.modal = {
+//			show: function() {
+//				$ionicPopup.confirm({templateUrl:'templates/dataform.html',okText: "Send"});
+//			}
+//	};
+	 
 
 	$scope.search = function(buttonText) {
 		SearchStore.search(buttonText);

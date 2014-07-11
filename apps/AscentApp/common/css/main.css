@@ -56,15 +56,22 @@ body {
 	pading-bottom:20px;
 	background: #FFF;
 }
-.bar .title{
-font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;	font-weight: 700;
-	font-style: italic;
-	font-size: 30px;
+.bar {
+	-webkit-box-shadow: inset 0 -4px 20px -6px #DDD;
+	   -moz-box-shadow: inset 0 -4px 20px -6px #DDD;
+	        box-shadow: inset 0 -4px 20px -6px #DDD;       
+	 height:50px;      
+}
+
+.bar .title {
+	font-size:30px;
+	font-family:"Lubalin";
 }
 
 .article-header {
-	font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;	font-weight: 700;
-	font-style: italic;
+/* 	font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;	font-weight: 700; */
+/* 	font-style: italic; */
+font-family:"Lubalin";
 	font-size: 30px;
 }
 
@@ -114,9 +121,12 @@ font-family: "Book Antiqua", Palatino, "Palatino Linotype", "Palatino LT STD", G
 .banner {
 	padding: 30px 0 30px 0 ;
 	font-family: "Lubalin";
+	
 	font-size:3.8vw;
 	letter-spacing:4px;
-	color:#EEE;
+/* 	color:#f04e37; */
+/* color:#0089c5; */
+	color:#FFF;
 	height:auto;
 	text-align:center;
 	text-shadow: 4px 4px #000000;
