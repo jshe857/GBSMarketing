@@ -1,0 +1,52 @@
+$positive:#00afda;
+$energized:#fdb811;
+$energized-med:#ffe14e;
+$energized-light: #F9EBAE;
+$balanced:#608131;
+$balanced-light: #9eb184;
+$bigblue: #001934;
+$bigblue-light: #006792;
+$preview-padding: 45px;
+
+@import "ionic/ionic";
+@import "_fonts";
+@import "_carousel";
+@import "_media";
+@import "_sidemenus";
+
+
+h3 {
+	color: $energized;
+}
+
+body {
+	font-family: helveticaneue;
+	line-height:180%;
+}
+
+
+.title {
+	font-family:"Lubalin";
+}
+
+.header {
+	padding:$preview-padding 0 10px 0 ;
+	font-size:40px;
+}
+
+.start {
+	position: fixed;
+	top: 30%;
+}
+
+.select {
+	position:absolute;
+	top:30%;
+	width: 90%;
+}
+
+.row {
+	padding:0 0 0 0;
+}
+
+

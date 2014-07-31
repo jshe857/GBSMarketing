@@ -61,7 +61,7 @@ ascent
 				'Mining' : 'mine'
 			};
 			obj.search = function(category) {
-				$state.go('search', {
+				$state.go('nav.search', {
 					searchKey : this[category],
 					title : category
 				});

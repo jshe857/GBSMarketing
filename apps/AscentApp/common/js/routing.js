@@ -1,26 +1,51 @@
-var ascent = angular.module('Ascent', [ 'ionic']).config(
+var ascent = angular.module('Ascent', [ 'ionic' ]).config(
 		[ '$stateProvider', '$urlRouterProvider',
 				function($stateProvider, $urlRouterProvider) {
-					$stateProvider.state('start', {
+
+					$stateProvider.state('nav', {
+						url : '/nav',
+						abstract : true,
+						templateUrl : 'templates/navmenu.html'
+					}).state('nav.start', {
 						url : '/start',
-						templateUrl : 'templates/start.html',
-						controller: 'StartCtrl'
-					}).state('cams', {
+						views : {
+							'menuContent' : {
+								templateUrl : 'templates/start.html',
+								controller : 'StartCtrl'
+							}
+						}
+					}).state('nav.cams', {
 						url : '/cams',
-						templateUrl : 'templates/select.html',
-						controller : 'CAMSCtrl'
-					}).state('industry', {
+						views : {
+							'menuContent' : {
+								templateUrl : 'templates/select.html',
+								controller : 'CAMSCtrl'
+							}
+						}
+					}).state('nav.industry', {
 						url : '/industry',
-						templateUrl : 'templates/select.html',
-						controller : 'IndustryCtrl'
-					}).state('search', {
-						url:'/search?searchKey&title',
-						templateUrl : 'templates/preview.html',
-						controller : 'PreviewCtrl'
-					}).state('details', {
-						url:'/details?media',
-						templateUrl : 'templates/details.html',
-						controller : 'DetailsCtrl'
+						views : {
+							'menuContent' : {
+								templateUrl : 'templates/select.html',
+								controller : 'IndustryCtrl'
+							}
+						}
+					}).state('nav.search', {
+						url : '/search?searchKey&title',
+						views : {
+							'menuContent' : {
+								templateUrl : 'templates/preview.html',
+								controller : 'PreviewCtrl'
+							}
+						}
+					}).state('nav.details', {
+						url : '/details?media',
+						views : {
+							'menuContent' : {
+								templateUrl : 'templates/details.html',
+								controller : 'DetailsCtrl'
+							}
+						}
 					});
-					$urlRouterProvider.otherwise('/start');
+					$urlRouterProvider.otherwise('/nav/start');
 				} ]);

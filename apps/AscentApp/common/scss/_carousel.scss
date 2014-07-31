@@ -1,0 +1,29 @@
+.col .card .item {
+	text-align: center;
+	font-size: 30px;
+	font-size:2.3vw;
+	font-weight:500;
+}
+
+.col-20.card .item {
+	text-align: center;
+/* 	font-size:17px; */
+	font-size:0.9vw;
+	font-weight:700;
+}
+
+.col-33.card .item {
+	text-align: center;
+/* 	font-size:17px; */
+	font-size:0.9cvw;
+	font-weight:700;
+}
+
+.item span.icon-span{
+	display:inline-block;
+	width: 24px;
+	text-align:center;
+	font-size:20px;
+	color:#FFF;
+	border-radius:20%;
+}

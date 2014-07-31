@@ -1,0 +1,36 @@
+.side-left {
+	background:$energized-med;
+	padding: 0 0 0 0;
+	
+	.button.button-full.button-outline {
+		background:white;
+	}
+	.button.button-full {
+		text-align:left;
+		font-family: "Lubalin";
+		padding: 0 0 0 10;
+		border:0px;
+		margin: 4 0 4 0;
+	}
+	.header {
+		color: white;
+		padding-bottom:100px;
+	}
+}
+
+
+.side-right {
+	background: $bigblue;
+	.item {
+		background: $bigblue;
+		color:white;
+		font-family:Lubalin;
+		font-size:18px;
+	}
+}
+
+
+
+
+
+
