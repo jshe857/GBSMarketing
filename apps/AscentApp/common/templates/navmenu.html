@@ -1,21 +1,19 @@
 <ion-side-menus>
   <ion-side-menu-content drag-content="false">
+  	<div class="overlay" ng-show="focusMenu()"></div>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content> 	
-  <ion-side-menu side="right" width="">
+  <ion-side-menu side="right" width="getSideMenuSize()">
           <ion-content class="side-right">
 				<div class="list">
-					<div class="item">Home</div>
-					<div class="item item-avatar">
-					<img src="images/cloudicon.png">
-					Cloud</div>
-					<div class="item">Analytics</div>
-					<div class="item">Mobile</div>
-					<div class="item">Social</div>
-					<div class="item">Banking</div>
-					<div class="item">Government</div>
-					<div class="item">Telecommunications</div>
-					<div class="item">Mining</div>
+					<div class="item" ui-sref="nav.start" menu-close>Home</div>
+					
+					<div ng-repeat="(key,value) in searchstore" >
+						<div ng-hide="key=='search'" class="item ibm-icon" ng-click="searchstore.search(key)" menu-close>
+							<img src="images/cloudicon.png">
+							{{key}}
+						</div>
+					</div>
 				</div>
 			</ion-content>
   </ion-side-menu>

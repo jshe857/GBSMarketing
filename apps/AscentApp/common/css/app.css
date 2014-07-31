@@ -1,3 +1,4 @@
+/*$balanced:#608131;*/
 /*!
   Ionicons, v1.5.2
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -3462,14 +3463,14 @@ a.subdued {
     .bar.bar-assertive.bar-footer {
       background-image: linear-gradient(180deg, #cc2511, #cc2511 50%, transparent 50%); }
   .bar.bar-balanced {
-    border-color: #374a1c;
-    background-color: #608131;
-    background-image: linear-gradient(0deg, #374a1c, #374a1c 50%, transparent 50%);
+    border-color: #638e2a;
+    background-color: #8cc63e;
+    background-image: linear-gradient(0deg, #638e2a, #638e2a 50%, transparent 50%);
     color: white; }
     .bar.bar-balanced .title {
       color: white; }
     .bar.bar-balanced.bar-footer {
-      background-image: linear-gradient(180deg, #374a1c, #00728d 50%, transparent 50%); }
+      background-image: linear-gradient(180deg, #638e2a, #00728d 50%, transparent 50%); }
   .bar.bar-energized {
     border-color: #c08802;
     background-color: #fdb811;
@@ -3682,15 +3683,15 @@ a.subdued {
     background: none; }
 
 .bar-balanced .button {
-  border-color: #374a1c;
-  background-color: #608131;
+  border-color: #638e2a;
+  background-color: #8cc63e;
   color: white; }
   .bar-balanced .button:hover {
     color: white;
     text-decoration: none; }
   .bar-balanced .button.active, .bar-balanced .button.activated {
-    border-color: #374a1c;
-    background-color: #374a1c;
+    border-color: #638e2a;
+    background-color: #638e2a;
     box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15); }
   .bar-balanced .button.button-clear {
     border-color: transparent;
@@ -3898,14 +3899,14 @@ a.subdued {
 
 .tabs-balanced > .tabs,
 .tabs.tabs-balanced {
-  border-color: #374a1c;
-  background-color: #608131;
-  background-image: linear-gradient(0deg, #374a1c, #374a1c 50%, transparent 50%);
+  border-color: #638e2a;
+  background-color: #8cc63e;
+  background-image: linear-gradient(0deg, #638e2a, #638e2a 50%, transparent 50%);
   color: white; }
   .tabs-balanced > .tabs .tab-item .badge,
   .tabs.tabs-balanced .tab-item .badge {
     background-color: white;
-    color: #608131; }
+    color: #8cc63e; }
 
 .tabs-energized > .tabs,
 .tabs.tabs-energized {
@@ -3988,10 +3989,10 @@ a.subdued {
 .tabs-striped.tabs-balanced .tab-item.active,
 .tabs-striped.tabs-balanced .tab-item.activated {
   margin-top: -4px;
-  color: #608131;
+  color: #8cc63e;
   border-style: solid;
   border-width: 4px 0 0 0;
-  border-color: #608131; }
+  border-color: #8cc63e; }
 .tabs-striped.tabs-energized .tab-item.tab-item-active,
 .tabs-striped.tabs-energized .tab-item.active,
 .tabs-striped.tabs-energized .tab-item.activated {
@@ -4158,7 +4159,7 @@ a.subdued {
   .tab-item.tab-item-active.tab-item-balanced,
   .tab-item.active.tab-item-balanced,
   .tab-item.activated.tab-item-balanced {
-    color: #608131; }
+    color: #8cc63e; }
   .tab-item.tab-item-active.tab-item-energized,
   .tab-item.active.tab-item-energized,
   .tab-item.activated.tab-item-energized {
@@ -4520,8 +4521,8 @@ a.subdued {
     background-color: #ef4e3a;
     color: white; }
   .item.item-balanced {
-    border-color: #374a1c;
-    background-color: #608131;
+    border-color: #638e2a;
+    background-color: #8cc63e;
     color: white; }
   .item.item-energized {
     border-color: #c08802;
@@ -4592,8 +4593,8 @@ a.subdued {
   .item-complex.activated .item-content.item-balanced,
   .item .item-content.active.item-balanced,
   .item .item-content.activated.item-balanced {
-    border-color: #374a1c;
-    background-color: #374a1c; }
+    border-color: #638e2a;
+    background-color: #638e2a; }
   .item.active.item-energized,
   .item.activated.item-energized,
   .item-complex.active .item-content.item-energized,
@@ -4740,12 +4741,12 @@ a.item-content {
     border-color: #cc2511;
     background-color: #cc2511; }
 .item-complex.item-balanced > .item-content {
-  border-color: #374a1c;
-  background-color: #608131;
+  border-color: #638e2a;
+  background-color: #8cc63e;
   color: white; }
   .item-complex.item-balanced > .item-content.active, .item-complex.item-balanced > .item-content:active {
-    border-color: #374a1c;
-    background-color: #374a1c; }
+    border-color: #638e2a;
+    background-color: #638e2a; }
 .item-complex.item-energized > .item-content {
   border-color: #c08802;
   background-color: #fdb811;
@@ -5322,7 +5323,7 @@ button.item.item-button-right {
   color: white; }
 .tabs .tab-item .badge.badge-balanced,
 .badge.badge-balanced {
-  background-color: #608131;
+  background-color: #8cc63e;
   color: white; }
 .tabs .tab-item .badge.badge-energized,
 .badge.badge-energized {
@@ -5795,9 +5796,9 @@ input[type="checkbox"][readonly] {
   background: #ef4e3a; }
 
 .checkbox-balanced input:before, .checkbox-balanced .checkbox-icon:before {
-  border-color: #608131; }
+  border-color: #8cc63e; }
 .checkbox-balanced input:checked:before, .checkbox-balanced input:checked + .checkbox-icon:before {
-  background: #608131; }
+  background: #8cc63e; }
 
 .checkbox-energized input:before, .checkbox-energized .checkbox-icon:before {
   border-color: #fdb811; }
@@ -5943,8 +5944,8 @@ input:checked + .checkbox-icon:after {
     border-color: #ef4e3a;
     background-color: #ef4e3a; }
   .toggle.toggle-balanced input:checked + .track {
-    border-color: #608131;
-    background-color: #608131; }
+    border-color: #8cc63e;
+    background-color: #8cc63e; }
   .toggle.toggle-energized input:checked + .track {
     border-color: #fdb811;
     background-color: #fdb811; }
@@ -6144,7 +6145,7 @@ input[type="range"] {
   .range.range-calm input::-webkit-slider-thumb:before {
     background: #43cee6; }
   .range.range-balanced input::-webkit-slider-thumb:before {
-    background: #608131; }
+    background: #8cc63e; }
   .range.range-assertive input::-webkit-slider-thumb:before {
     background: #ef4e3a; }
   .range.range-energized input::-webkit-slider-thumb:before {
@@ -6259,7 +6260,7 @@ input[type="range"] {
   .item-select.item-assertive:after, .item-select.item-assertive .input-label {
     color: white; }
   .item-select.item-balanced select {
-    background: #608131;
+    background: #8cc63e;
     color: white; }
   .item-select.item-balanced:after, .item-select.item-balanced .input-label {
     color: white; }
@@ -6485,30 +6486,30 @@ progress {
         box-shadow: none;
         color: #fff; }
   .button.button-balanced {
-    border-color: #374a1c;
-    background-color: #608131;
+    border-color: #638e2a;
+    background-color: #8cc63e;
     color: white; }
     .button.button-balanced:hover {
       color: white;
       text-decoration: none; }
     .button.button-balanced.active, .button.button-balanced.activated {
-      border-color: #374a1c;
-      background-color: #374a1c;
+      border-color: #638e2a;
+      background-color: #638e2a;
       box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.15); }
     .button.button-balanced.button-clear {
       border-color: transparent;
       background: none;
       box-shadow: none;
-      color: #608131; }
+      color: #8cc63e; }
     .button.button-balanced.button-icon {
       border-color: transparent;
       background: none; }
     .button.button-balanced.button-outline {
-      border-color: #608131;
+      border-color: #8cc63e;
       background: transparent;
-      color: #608131; }
+      color: #8cc63e; }
       .button.button-balanced.button-outline.active, .button.button-balanced.button-outline.activated {
-        background-color: #608131;
+        background-color: #8cc63e;
         box-shadow: none;
         color: #fff; }
   .button.button-energized {
@@ -8167,13 +8168,13 @@ a.button {
   border-color: #cc2511; }
 
 .balanced, a.balanced {
-  color: #608131; }
+  color: #8cc63e; }
 
 .balanced-bg {
-  background-color: #608131; }
+  background-color: #8cc63e; }
 
 .balanced-border {
-  border-color: #374a1c; }
+  border-color: #638e2a; }
 
 .energized, a.energized {
   color: #fdb811; }
@@ -8325,31 +8326,20 @@ a.button {
 @font-face {
   font-family: 'helveticaneue';
   src: url("../fonts/helveticaneue-webfont.ttf"); }
-.col .card .item {
+.carousel {
   text-align: center;
-  font-size: 30px;
-  font-size: 2.3vw;
-  font-weight: 500; }
-
-.col-20.card .item {
-  text-align: center;
-  /* 	font-size:17px; */
-  font-size: 0.9vw;
-  font-weight: 700; }
-
-.col-33.card .item {
-  text-align: center;
-  /* 	font-size:17px; */
-  font-size: 0.9cvw;
-  font-weight: 700; }
-
-.item span.icon-span {
-  display: inline-block;
-  width: 24px;
-  text-align: center;
-  font-size: 20px;
-  color: #FFF;
-  border-radius: 20%; }
+  font-weight: 600; }
+  .carousel .item {
+    border-color: white; }
+  .carousel .col-33.card {
+    font-size: 0.7vw; }
+  .carousel span.icon-span {
+    display: inline-block;
+    width: 24px;
+    text-align: center;
+    font-size: 20px;
+    color: #FFF;
+    border-radius: 20%; }
 
 .media {
   position: relative;
@@ -8390,6 +8380,40 @@ a.button {
     color: white;
     font-family: Lubalin;
     font-size: 18px; }
+  .side-right .ibm-icon img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: -11px;
+    border-radius: 45px;
+    background: url("../images/cloudicon.PNG");
+    margin-right: 10px; }
+
+.landing {
+  background: url("../images/lighthouse.jpg");
+  background-size: 100% 100%;
+  text-align: center;
+  color: white; }
+  .landing .flavor-text {
+    opacity: 0.7;
+    padding: 80px 0 10px 0;
+    font-size: 20px;
+    margin: 0 55px 30px 55px;
+    border-bottom: thin solid #ffffff; }
+  .landing .landing-button {
+    -webkit-tap-highlight-color: transparent;
+    border-color: white;
+    font-size: 20px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center; }
+  .landing .landing-button.big-button {
+    height: 300px;
+    width: 300px;
+    border-radius: 300px;
+    border-width: 15px; }
 
 h3 {
   color: #fdb811; }
@@ -8405,10 +8429,6 @@ body {
   padding: 45px 0 10px 0;
   font-size: 40px; }
 
-.start {
-  position: fixed;
-  top: 30%; }
-
 .select {
   position: absolute;
   top: 30%;
@@ -8416,3 +8436,13 @@ body {
 
 .row {
   padding: 0 0 0 0; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  opacity: 0.7;
+  height: 100%;
+  width: 100%;
+  z-index: 999; }

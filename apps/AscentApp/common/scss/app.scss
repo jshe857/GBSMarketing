@@ -2,7 +2,8 @@ $positive:#00afda;
 $energized:#fdb811;
 $energized-med:#ffe14e;
 $energized-light: #F9EBAE;
-$balanced:#608131;
+/*$balanced:#608131;*/
+$balanced:#8cc63e;
 $balanced-light: #9eb184;
 $bigblue: #001934;
 $bigblue-light: #006792;
@@ -13,6 +14,7 @@ $preview-padding: 45px;
 @import "_carousel";
 @import "_media";
 @import "_sidemenus";
+@import "_start";
 
 
 h3 {
@@ -34,11 +36,6 @@ body {
 	font-size:40px;
 }
 
-.start {
-	position: fixed;
-	top: 30%;
-}
-
 .select {
 	position:absolute;
 	top:30%;
@@ -49,4 +46,14 @@ body {
 	padding:0 0 0 0;
 }
 
+.overlay {
+	position:fixed;
+	top:0;
+	left:0;
+	background: black;
+	opacity:0.7;
+	height:100%;
+	width:100%;
+	z-index:999;
+}
 

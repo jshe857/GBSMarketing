@@ -1,23 +1,18 @@
 <ion-view title='Experience IBM'>
-
-<div class="row start">
+<ion-content class="landing">
+<div class="flavor-text">Discover the possibilities</div>
+<div class="row">
 	<div class="col">
-		<div class="card" ng-click="filterby('cams')">
-		 <img class="full-image" src="images/cams.jpg">
-				<a class="item">New Markets</a>
-		</div>
+		<div class="landing-button title button button-balanced big-button" ng-click="filterby('industry')">Experience </br> Industry</div>
 	</div>
 	<div class="col">
-		<div class="card" ng-click="filterby('industry')">
-		 <img class="full-image" src="images/industry.jpg">
-			<a class="item">Industry</a>
-		</div>
+		<div class="landing-button title button button-energized big-button" ng-click="filterby('cams')">Experience </br> New Markets</div>	
 	</div>
 	<div class="col">
-		<div class="card">
-		 <img class="full-image" src="images/painpts.jpg">
-			<a class="item" href="#/cams">Pain Points</a>
-		</div>
+		<div class="landing-button title button button-positive big-button">
+		<div>Paint Points</div>
+		</div>	
 	</div>
 </div>
+</ion-content>
 </ion-view>
