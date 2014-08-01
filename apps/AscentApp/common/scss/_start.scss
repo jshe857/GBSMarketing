@@ -1,21 +1,21 @@
-$big-size: 300px;
-$small-size: 175px;
-
+$big-size: 280px;
+$small-size: 120px;
+$icon-size:45px;
 .landing {
 	background:url('../images/lighthouse.jpg');
 	background-size:100% 100%;
 	text-align:center;
 	color:white;
 	.flavor-text {
-		opacity:0.7;
 		padding:80px 0 10px 0;
 		font-size:20px;
 		margin: 0 55px 30px 55px;
-
 		border-bottom:thin solid #ffffff;
+		opacity:0;
 	}
+
+	
 	.landing-button {
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
 		border-color:white;
 		font-size:20px;
 		margin:auto;
@@ -24,12 +24,42 @@ $small-size: 175px;
 		align-content:center;
 		flex-direction:column; 
     	text-align: center;
+    	
 	}
 	.landing-button.big-button {	
 		height:$big-size;
 		width:$big-size;
 		border-radius:$big-size;
 		border-width:$big-size /20;
+		transition: all 0.5s ease;
+		-webkit-transition: all 0.5s ease;
+    	-moz-transition: all 0.5s ease;
+    	-o-transition: all 0.5s ease;
+	}
+	.landing-button.small-button {
+		display:inline-block;
+		font-size:12px;
+		height:$small-size;
+		width:$small-size;
+		border-radius:$small-size;
+		border-width:$small-size /20;
+		z-index:20;
+	}
+}
+
+.invisible {
+	display:none;
+}
+
+
+.dot-container {
+	margin: -110px 0 -30px 0;
+	.dot {
+		height: 10px;
+		width:10px;
+		border-radius:20px;
+		margin:10px auto;
+		background:white;
 	}
 }
 

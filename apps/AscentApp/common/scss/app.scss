@@ -15,6 +15,7 @@ $preview-padding: 45px;
 @import "_media";
 @import "_sidemenus";
 @import "_start";
+@import "_animate";
 
 
 h3 {
@@ -23,7 +24,6 @@ h3 {
 
 body {
 	font-family: helveticaneue;
-	line-height:180%;
 }
 
 
@@ -55,5 +55,8 @@ body {
 	height:100%;
 	width:100%;
 	z-index:999;
+}
+.article-body {
+	line-height:180%;
 }
 

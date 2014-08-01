@@ -8366,9 +8366,10 @@ a.button {
   .side-left .button.button-full {
     text-align: left;
     font-family: "Lubalin";
+    font-size: 20px;
     padding: 0 0 0 10;
     border: 0px;
-    margin: 4 0 4 0; }
+    margin: 7 0 7 0; }
   .side-left .header {
     color: white;
     padding-bottom: 100px; }
@@ -8394,13 +8395,12 @@ a.button {
   text-align: center;
   color: white; }
   .landing .flavor-text {
-    opacity: 0.7;
     padding: 80px 0 10px 0;
     font-size: 20px;
     margin: 0 55px 30px 55px;
-    border-bottom: thin solid #ffffff; }
+    border-bottom: thin solid #ffffff;
+    opacity: 0; }
   .landing .landing-button {
-    -webkit-tap-highlight-color: transparent;
     border-color: white;
     font-size: 20px;
     margin: auto;
@@ -8410,17 +8410,91 @@ a.button {
     flex-direction: column;
     text-align: center; }
   .landing .landing-button.big-button {
-    height: 300px;
-    width: 300px;
-    border-radius: 300px;
-    border-width: 15px; }
+    height: 280px;
+    width: 280px;
+    border-radius: 280px;
+    border-width: 14px;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease; }
+  .landing .landing-button.small-button {
+    display: inline-block;
+    font-size: 12px;
+    height: 120px;
+    width: 120px;
+    border-radius: 120px;
+    border-width: 6px;
+    z-index: 20; }
+
+.invisible {
+  display: none; }
+
+.dot-container {
+  margin: -110px 0 -30px 0; }
+  .dot-container .dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 20px;
+    margin: 10px auto;
+    background: white; }
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+
+  100% {
+    opacity: 0; } }
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-duration: 4.5s;
+  animation-duration: 4.5s; }
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -80%, 0);
+    transform: translate3d(0, -80%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none; } }
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -80%, 0);
+    -ms-transform: translate3d(0, -80%, 0);
+    transform: translate3d(0, -80%, 0); }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none; } }
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s; }
+
+.translateUp {
+  -webkit-transform: translate3d(0, -40%, 0);
+  -ms-transform: translate3d(0, -40%, 0);
+  transform: translate3d(0, -40%, 0); }
 
 h3 {
   color: #fdb811; }
 
 body {
-  font-family: helveticaneue;
-  line-height: 180%; }
+  font-family: helveticaneue; }
 
 .title {
   font-family: "Lubalin"; }
@@ -8446,3 +8520,6 @@ body {
   height: 100%;
   width: 100%;
   z-index: 999; }
+
+.article-body {
+  line-height: 180%; }

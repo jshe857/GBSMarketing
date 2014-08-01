@@ -1,18 +1,85 @@
-<ion-view title='Experience IBM'>
-<ion-content class="landing">
-<div class="flavor-text">Discover the possibilities</div>
+<ion-view title='Experience IBM'> <ion-content
+	class="landing">
+<div class="flavor-text fadeOut">Discover the possibilities</div>
 <div class="row">
 	<div class="col">
-		<div class="landing-button title button button-balanced big-button" ng-click="filterby('industry')">Experience </br> Industry</div>
+		<div class="landing-button title button button-balanced big-button"
+			ng-class="pressed==1 ? 'translateUp' : ''" ng-click="pressed=1">
+			Experience </br> Industry
+		</div>
+		<div class="drop-container"
+			ng-class="pressed == 1 ? 'fadeInDown' : 'invisible'">
+			<div class="dot-container">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			</div>
+			<p>
+			<div class="landing-button title button button-balanced small-button"
+				ng-click="search('Banking')">
+				<img src="images/cloudicon.png" height="55" width="55"
+					style="border-radius: 45px; margin: 14 0 -14 0"> Banking
+			</div>
+			<div class="landing-button title button button-balanced small-button"
+				ng-click="search('Government')">
+				<img src="images/cloudicon.png" height="55" width="55"
+					style="border-radius: 45px; margin: 14 0 -14 0"> Government
+			</div>
+			</p>
+			<p>
+			<div class="landing-button title button button-balanced small-button"
+				ng-click="search('Telecommunications')">
+				<img src="images/cloudicon.png" height="55" width="55"
+					style="border-radius: 45px; margin: 14 0 -14 0"> Telecomms
+			</div>
+			<div class="landing-button title button button-balanced small-button"
+				ng-click="search('Mining')">
+				<img src="images/cloudicon.png" height="55" width="55"
+					style="border-radius: 45px; margin: 14 0 -14 0"> Mining
+			</div>
+			</p>
+		</div>
 	</div>
 	<div class="col">
-		<div class="landing-button title button button-energized big-button" ng-click="filterby('cams')">Experience </br> New Markets</div>	
+		<div class="landing-button title button button-energized big-button"
+			ng-class="pressed==2 ? 'translateUp' : ''" ng-click="pressed=2">
+			Experience </br> New Markets
+		</div>
+		<div class="drop-container"
+			ng-class="pressed == 2 ? 'fadeInDown' : 'invisible'">
+			<div class="dot-container">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			</div>
+			<p>
+			<div class="landing-button title button button-energized small-button"
+				ng-click="search('Banking')">
+				<img src="images/cloudicon.png" height="55" width="55"
+					style="border-radius: 45px; margin: 14 0 -14 0"> Banking
+			</div>
+			<div class="landing-button title button button-energized small-button"
+				ng-click="search('Government')">
+				<img src="images/cloudicon.png" height="55" width="55"
+					style="border-radius: 45px; margin: 14 0 -14 0"> Government
+			</div>
+			</p>
+			<p>
+			<div class="landing-button title button button-energized small-button"
+				ng-click="search('Telecommunications')">
+				<img src="images/cloudicon.png" height="55" width="55"
+					style="border-radius: 45px; margin: 14 0 -14 0"> Telecomms
+			</div>
+			<div class="landing-button title button button-energized small-button"
+				ng-click="search('Mining')">
+				<img src="images/cloudicon.png" height="55" width="55"
+					style="border-radius: 45px; margin: 14 0 -14 0"> Mining
+			</div>
+			</p>
+		</div>
 	</div>
 	<div class="col">
-		<div class="landing-button title button button-positive big-button">
-		<div>Paint Points</div>
-		</div>	
+		<div class="landing-button title button button-positive big-button"
+			ng-click="pressed=3">Pain Point</div>
 	</div>
-</div>
-</ion-content>
-</ion-view>
+</ion-content> </ion-view>
