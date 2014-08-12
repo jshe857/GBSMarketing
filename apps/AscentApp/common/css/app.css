@@ -8364,26 +8364,34 @@ a.button {
   .side-left .button.button-full {
     text-align: left;
     font-family: "Lubalin";
-    font-size: 20px;
+    font-size: 30px;
     border: 0px;
-    margin: 40px 0 40px 0; }
+    margin: 66.66667px 0 66.66667px 0;
+    height: 83px;
+    line-height: 83px; }
   .side-left .header {
     color: white;
-    padding-bottom: 100px; }
+    padding-bottom: 120px;
+    margin-left: 25px; }
   .side-left .button-circle {
-    margin-top: -20px;
-    margin-left: -20px;
-    margin-right: 20px;
+    margin-top: -12.5px;
+    margin-left: -25px;
+    margin-right: 25px;
     float: left;
-    height: 80px;
-    width: 80px;
-    border-radius: 80px;
-    border-width: 30px;
-    border-color: white; }
+    height: 100px;
+    width: 100px;
+    border-radius: 100px;
+    border: 3px solid white;
+    z-index: 999;
+    position: relative; }
   .side-left .button-circle.balanced {
     background: #8cc63e; }
+  .side-left .button-circle.positive {
+    background: #00afda; }
+  .side-left .button-circle.energized {
+    background: #fdb811; }
   .side-left .button-container {
-    margin-left: 100px; }
+    margin-left: 140px; }
 
 .side-left.positive {
   background: #bdded5; }
