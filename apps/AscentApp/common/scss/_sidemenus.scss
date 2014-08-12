@@ -1,7 +1,6 @@
+$button-size:80px;
 .side-left {
-	background:$energized-med;
 	padding: 0 0 0 0;
-	
 	.button.button-full.button-outline {
 		background:white;
 	}
@@ -9,16 +8,43 @@
 		text-align:left;
 		font-family: "Lubalin";
 		font-size:20px;
-		padding: 0 0 0 10;
 		border:0px;
-		margin: 7 0 7 0;
+		margin: $button-size/2 0 $button-size/2 0;
 	}
 	.header {
 		color: white;
 		padding-bottom:100px;
 	}
+	.button-circle {
+		margin-top:-$button-size/4;
+		margin-left:-$button-size/4;
+		margin-right:$button-size/4;		
+		float:left;
+		height:$button-size;
+		width:$button-size;
+		border-radius:$button-size;
+		border-width:30px;
+		border-color:white;
+	}
+	.button-circle.balanced {
+		background:$balanced;
+	}
+	.button-container {
+		margin-left:100px;
+	}
 }
 
+
+.side-left.positive {
+	background:$positive-background;
+}
+.side-left.energized {
+	background:$energized-background;
+	
+}
+.side-left.balanced {
+	background:$balanced-background;
+}
 
 .side-right {
 	background: $bigblue;
@@ -33,7 +59,6 @@
 		height:45px;
 		margin-bottom:-11px;
 		border-radius:45px;
-		background:url('../images/cloudicon.PNG');
 		margin-right:10px;
 	}
 }

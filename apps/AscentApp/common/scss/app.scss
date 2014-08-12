@@ -1,12 +1,18 @@
 $positive:#00afda;
+$positive-selected:#495465;
+$positive-background:#bdded5;
+
 $energized:#fdb811;
-$energized-med:#ffe14e;
-$energized-light: #F9EBAE;
-/*$balanced:#608131;*/
+$energized-selected:#ffef4a;
+$energized-background: #ffe471;
+
+
 $balanced:#8cc63e;
-$balanced-light: #9eb184;
+$balanced-selected:#8cc63e;
+$balanced-background: #819b5c;
+
 $bigblue: #001934;
-$bigblue-light: #006792;
+$bigblue-background: #006792;
 $preview-padding: 45px;
 
 @import "ionic/ionic";
@@ -16,11 +22,6 @@ $preview-padding: 45px;
 @import "_sidemenus";
 @import "_start";
 @import "_animate";
-
-
-h3 {
-	color: $energized;
-}
 
 body {
 	font-family: helveticaneue;

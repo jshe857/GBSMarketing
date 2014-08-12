@@ -51,21 +51,30 @@ ascent
 					return operations;
 				}).factory('SearchStore', function($state) {
 			var obj = {
-				'Cloud' : 'c',
-				'Analytics' : 'a',
-				'Mobile' : 'm',
-				'Social' : 's',
-				'Banking' : 'bank',
-				'Government' : 'govt',
-				'Telecommunications' : 'telecom',
-				'Mining' : 'mine'
+				'Cloud' : {key: 'c',
+						   theme: 'energized'},
+				'Analytics' :{key: 'a',
+							theme: 'balanced'},
+				'Mobile' : {key: 'm',
+					theme: 'positive'},
+				'Social' : {key:'s',
+					theme: 'balanced'},
+				'Banking' : {key:'bank',
+							 theme: 'balanced'},
+				'Government' : {key:'govt',
+					theme: 'energized'},
+				'Telecommunications' : {key:'telecom',
+					theme: 'positive'},
+				'Mining' : {key:'mine',
+					theme: 'balanced'}
 			};
 			obj.search = function(category) {
 				$state.go('nav.search', {
-					searchKey : this[category],
-					title : category
+					searchKey : this[category].key,
+					title : category,
+					theme : this[category].theme
 				});
-			}
+			};
 			return obj;
 		}).service('EmailService', function($window) {
 			this.send = function(form) {

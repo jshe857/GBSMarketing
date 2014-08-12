@@ -31,7 +31,7 @@ var ascent = angular.module('Ascent', [ 'ionic' ]).config(
 							}
 						}
 					}).state('nav.search', {
-						url : '/search?searchKey&title',
+						url : '/search?searchKey&title&theme',
 						views : {
 							'menuContent' : {
 								templateUrl : 'templates/preview.html',

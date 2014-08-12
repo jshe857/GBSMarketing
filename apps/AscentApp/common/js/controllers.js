@@ -35,28 +35,21 @@ ascent.controller(
 						+ id);
 			};
 		}).controller('StartCtrl', function($scope, $state) {
-	$scope.filterby = function(filter) {
-		$state.go('nav.' + filter);
-	};
-}).controller('CAMSCtrl', function($scope, $state) {
-	$scope.button1 = 'Cloud';
-	$scope.button2 = 'Analytics';
-	$scope.button3 = 'Mobile';
-	$scope.button4 = 'Social';
-}).controller('IndustryCtrl', function($scope, $state) {
-	$scope.button1 = 'Banking';
-	$scope.button2 = 'Government';
-	$scope.button3 = 'Telecommunications';
-	$scope.button4 = 'Mining';
+
 }).controller('PreviewCtrl',
 		function($scope, $state, $stateParams, $window, $rootScope) {
 			$scope.db.queryKey($stateParams.searchKey);
+			console.log($stateParams);
 			$scope.title = $stateParams.title;
+			$scope.style = {
+					theme: $stateParams.theme
+			};
 			$scope.getDetails = function(row) {
 				$state.go('nav.details', {
 					media : JSON.stringify(row)
 				});
 			};
+			
 }).controller('DetailsCtrl', function($scope, $stateParams, $http) {
 	$scope.media = angular.fromJson($stateParams.media);
 	$http.get("media/" + $scope.media.id + "/main.txt").success(function(data) {

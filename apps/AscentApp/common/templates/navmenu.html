@@ -10,7 +10,7 @@
 					
 					<div ng-repeat="(key,value) in searchstore" >
 						<div ng-hide="key=='search'" class="item ibm-icon" ng-click="searchstore.search(key)" menu-close>
-							<img src="images/cloudicon.png">
+							<img ng-src="images/icons/{{key}}.png">
 							{{key}}
 						</div>
 					</div>
