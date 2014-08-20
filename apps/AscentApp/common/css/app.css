@@ -8357,8 +8357,31 @@ a.button {
   right: 0;
   bottom: 0; }
 
+.side-left.positive {
+  background: #bdded5; }
+  .side-left.positive .button-circle.positive {
+    background: #00afda; }
+  .side-left.positive .button-circle.positive.selected {
+    background: #0075ab; }
+
+.side-left.balanced {
+  background: #819b5c; }
+  .side-left.balanced .button-circle.balanced {
+    background: #8cc63e; }
+  .side-left.balanced .button-circle.balanced.selected {
+    background: #008951; }
+
+.side-left.energized {
+  background: #ffe471; }
+  .side-left.energized .button-circle.energized {
+    background: #fdb811; }
+  .side-left.energized .button-circle.energized.selected {
+    background: #ffef4a; }
+
 .side-left {
   padding: 0 0 0 0; }
+  .side-left img {
+    margin-bottom: -15px; }
   .side-left .button.button-full.button-outline {
     background: white; }
   .side-left .button.button-full {
@@ -8374,7 +8397,7 @@ a.button {
     padding-bottom: 120px;
     margin-left: 25px; }
   .side-left .button-circle {
-    margin-top: -12.5px;
+    margin-top: -11.11111px;
     margin-left: -25px;
     margin-right: 25px;
     float: left;
@@ -8384,23 +8407,8 @@ a.button {
     border: 3px solid white;
     z-index: 999;
     position: relative; }
-  .side-left .button-circle.balanced {
-    background: #8cc63e; }
-  .side-left .button-circle.positive {
-    background: #00afda; }
-  .side-left .button-circle.energized {
-    background: #fdb811; }
   .side-left .button-container {
     margin-left: 140px; }
-
-.side-left.positive {
-  background: #bdded5; }
-
-.side-left.energized {
-  background: #ffe471; }
-
-.side-left.balanced {
-  background: #819b5c; }
 
 .side-right {
   background: #001934; }
@@ -8412,7 +8420,7 @@ a.button {
   .side-right .ibm-icon img {
     width: 45px;
     height: 45px;
-    margin-bottom: -11px;
+    margin-bottom: -8px;
     border-radius: 45px;
     margin-right: 10px; }
 
@@ -8425,7 +8433,7 @@ a.button {
     padding: 80px 0 10px 0;
     font-size: 20px;
     margin: 0 55px 30px 55px;
-    border-bottom: thin solid #ffffff;
+    border-bottom: thin solid white;
     opacity: 0; }
   .landing .landing-button {
     border-color: white;

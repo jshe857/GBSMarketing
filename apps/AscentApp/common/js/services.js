@@ -69,7 +69,7 @@ ascent
 					theme: 'balanced'}
 			};
 			obj.search = function(category) {
-				$state.go('nav.search', {
+				$state.go('nav.search.references', {
 					searchKey : this[category].key,
 					title : category,
 					theme : this[category].theme

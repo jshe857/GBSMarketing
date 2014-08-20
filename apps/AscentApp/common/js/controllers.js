@@ -50,6 +50,7 @@ ascent.controller(
 				});
 			};
 			
+			$scope.selected = 1;
 }).controller('DetailsCtrl', function($scope, $stateParams, $http) {
 	$scope.media = angular.fromJson($stateParams.media);
 	$http.get("media/" + $scope.media.id + "/main.txt").success(function(data) {

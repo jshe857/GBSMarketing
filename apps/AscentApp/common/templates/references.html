@@ -1,0 +1,46 @@
+<div class="list">
+	<div class="title header" ng-class="style.theme">
+		<p>Rethink IT</p>
+		<p>&nbsp;&nbsp;&nbsp;With Cloud</p>
+	</div>
+	<h3 class="title" ng-class="style.theme">How</h3>
+	<div class="article-body">Cloud technology is driving historical
+		levels of business innovation - Today, business leaders throughout
+		Australia and around the world are looking beyond cloud&#39;s IT
+		advantages and drawing upon its game-changing business strategy
+		opportunities. Cloud offers unparalleled promise to organisations
+		looking to improve, expand or revolutionise their enterprise. From
+		harnessing big data to creating targeted consumer campaigns to
+		speeding product time to market, the opportunities for business
+		transformation and innovation are enormous.</div>
+</div>
+<h3 class="title" ng-class="style.theme">Client Testimonials</h3>
+<ion-scroll direction="x">
+<div class="row carousel">
+	<div class="card col col-33" ng-click="getDetails(row)"
+		ng-repeat="row in list">
+		<img class="full-image" ng-src="{{getImage(row.id)}}">
+		<div class="item">
+			{{row.title}}
+			<div>
+				<div style="height: 20px">
+					<span class="icon-span" ng-show="row.c" style="background: #3996D5">
+						<i class="icon ion-cloud"> </i>
+					</span> <span class="icon-span" ng-show="row.a"
+						style="background: #FACF8D"> <i class="icon ion-search">
+
+					</i>
+					</span> <span class="icon-span" ng-show="row.m"
+						style="background: #EF746D"> <i class="icon ion-iphone">
+
+					</i>
+					</span> <span class="icon-span" ng-show="row.s"
+						style="background: #31CCB0"> <i
+						class="icon ion-person-stalker"> </i>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</ion-scroll>

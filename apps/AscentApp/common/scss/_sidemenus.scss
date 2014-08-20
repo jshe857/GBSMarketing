@@ -1,6 +1,31 @@
 $button-size:100px;
+
+@mixin theme($name,$color,$background,$selected) {
+	.side-left.#{$name} {
+		background:$background;
+		
+		.button-circle.#{$name} {
+			background:$color;
+		}
+		.button-circle.#{$name}.selected {
+			background:$selected;
+		}
+		.button.button-full.button-#{$name} {
+			 
+		}
+	}
+}
+@include theme(positive,$positive,$positive-background,$positive-selected);
+@include theme(balanced,$balanced,$balanced-background,$balanced-selected);
+@include theme(energized,$energized,$energized-background,$energized-selected);
+
+
+
 .side-left {
 	padding: 0 0 0 0;
+	img {
+		margin-bottom:-15px
+	}
 	.button.button-full.button-outline {
 		background:white;
 	}
@@ -12,7 +37,6 @@ $button-size:100px;
 		margin: $button-size/1.5 0 $button-size/1.5 0;
 		height: $button-size - 17;
 		line-height:$button-size - 17;
-		
 	}
 	.header {
 		color: white;
@@ -20,7 +44,7 @@ $button-size:100px;
 		margin-left:25px;
 	}
 	.button-circle {
-		margin-top:-$button-size/8;
+		margin-top:-$button-size/9;
 		margin-left:-$button-size/4;
 		margin-right:$button-size/4;		
 		float:left;
@@ -30,31 +54,10 @@ $button-size:100px;
 		border: 3px solid white;
 		z-index:999;
 		position:relative;
-	}
-	.button-circle.balanced {
-		background:$balanced;
-	}
-	.button-circle.positive {
-		background:$positive;
-	}
-	.button-circle.energized {
-		background:$energized;
-	}		
+	}	
 	.button-container {
 		margin-left:140px;
 	}
-}
-
-
-.side-left.positive {
-	background:$positive-background;
-}
-.side-left.energized {
-	background:$energized-background;
-	
-}
-.side-left.balanced {
-	background:$balanced-background;
 }
 
 .side-right {
@@ -68,7 +71,7 @@ $button-size:100px;
 	.ibm-icon img{
 		width:45px;
 		height:45px;
-		margin-bottom:-11px;
+		margin-bottom:-8px;
 		border-radius:45px;
 		margin-right:10px;
 	}
