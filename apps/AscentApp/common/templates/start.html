@@ -1,11 +1,12 @@
 <ion-view title='Experience IBM'> <ion-content
 	class="landing">
 <div class="flavor-text fadeOut">Discover the possibilities</div>
-<div class="row">
+<div class="row responsive-lg">
 	<div class="col">
 		<div class="landing-button title button button-balanced big-button"
 			ng-class="pressed==1 ? 'translateUp' : ''" ng-click="pressed=1">
-			Experience </br> Industry
+			Experience <br> Industry <br>
+			<i class="icon ion-chevron-down indicator" ng-class="pressed==1 ? '' : 'invisible'"></i>
 		</div>
 		<div class="drop-container"
 			ng-class="pressed == 1 ? 'fadeInDown' : 'invisible'">
@@ -43,7 +44,8 @@
 	<div class="col">
 		<div class="landing-button title button button-energized big-button"
 			ng-class="pressed==2 ? 'translateUp' : ''" ng-click="pressed=2">
-			Experience </br> New Markets
+			Experience <br> New Markets
+			<i class="icon ion-chevron-down indicator" ng-class="pressed==2 ? '' : 'invisible'"></i>
 		</div>
 		<div class="drop-container"
 			ng-class="pressed == 2 ? 'fadeInDown' : 'invisible'">
@@ -81,5 +83,5 @@
 	<div class="col">
 		<div class="landing-button title button button-positive big-button"
 			ng-click="pressed=3">Pain Point</div>
-	</div>
+	</div>	
 </ion-content> </ion-view>

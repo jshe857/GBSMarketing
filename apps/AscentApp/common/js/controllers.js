@@ -51,7 +51,8 @@ ascent.controller(
 			};
 			
 			$scope.selected = 1;
-}).controller('DetailsCtrl', function($scope, $stateParams, $http) {
+}).controller('DetailsCtrl', function($scope, $stateParams, $http, FavouriteService) {
+	var favourites = FavouriteService;
 	$scope.media = angular.fromJson($stateParams.media);
 	$http.get("media/" + $scope.media.id + "/main.txt").success(function(data) {
 		$scope.media.body = data;
@@ -62,6 +63,15 @@ ascent.controller(
 			'background-image' : 'url("' + url + '")'
 		};
 	};
+	$scope.favourite = function() {
+		console.log("index:" + favourites.indexOf($scope.media));
+		if (favourites.indexOf($scope.media) != -1) {
+			
+			return true;
+		}
+		return false;
+	};
+	
 }).controller('FormCtrl', function($scope, EmailService) {
 	$scope.client = {};
 	$scope.send = function(client) {

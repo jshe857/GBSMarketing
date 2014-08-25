@@ -1,3 +1,4 @@
+var favouritesKey = "favourites";
 ascent
 		.factory(
 				'DBService',
@@ -69,13 +70,28 @@ ascent
 					theme: 'balanced'}
 			};
 			obj.search = function(category) {
-				$state.go('nav.search.references', {
+				$state.go('nav.search.introduction', {
 					searchKey : this[category].key,
 					title : category,
 					theme : this[category].theme
 				});
 			};
 			return obj;
+		}).service('FavouriteService', function() {
+			var favourites = angular.fromJson(localStorage.getItem(favouritesKey));
+			if (favourites == null) {
+				favourites = [];
+			}
+			favourites.add = function(media){
+				this.push(media);
+				localStorage.setItem(favouritesKey,angular.toJson(this));
+			};
+			favourites.remove = function(media) {
+				var index = this.indexOf(media);
+				this.splice(index,1);
+				localStorage.setItem(favouritesKey,angular.toJson(this));
+			};
+			return favourites;		
 		}).service('EmailService', function($window) {
 			this.send = function(form) {
 				var csv = "";

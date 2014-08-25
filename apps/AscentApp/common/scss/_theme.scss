@@ -1,0 +1,30 @@
+@mixin theme($name,$color,$background,$selected,$text) {
+	.side-left.#{$name} {
+		background:$background;
+		
+		.button-circle.#{$name} {
+			background:$color;
+		}
+		.button-circle.#{$name}.selected {
+			background:$selected;
+		}
+		.button-side.#{$name} {
+			background:$color;
+			color:white;
+		}
+		.button-side.#{$name}.button-outline {
+			background:white;
+			color:$selected;	 
+		}
+	}
+	.header-bar.#{$name} {
+		background: $color;
+		color:$background;
+	}
+	.preview-content .#{$name}.header.title{
+		color:$text;	
+	}
+}
+@include theme(positive,$positive,$positive-background,$positive-selected,$positive);
+@include theme(balanced,$balanced,$balanced-background,$balanced-selected,$balanced-selected);
+@include theme(energized,$energized,$energized-background,$energized-selected,$energized);

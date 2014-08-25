@@ -20,28 +20,24 @@ var ascent = angular.module('Ascent', [ 'ionic' ]).config(
 							'menuContent' : {
 								templateUrl : 'templates/preview.html',
 								controller : 'PreviewCtrl'
-							},
-							'previewContent' : {
-								templateUrl : 'templates/references.html'
-							}
-							
-						}
-					}).state('nav.search.solutions', {
-						views: {
-							'previewContent': {
-								templateUrl : 'templates/solutions.html'
 							}
 						}
-					}).state('nav.search.expertise', {
+					}).state('nav.search.introduction', {
 						views: {
 							'previewContent': {
-								templateUrl : 'templates/expertise.html'
+								templateUrl : 'templates/introduction.html'
+							}
+						}
+					}).state('nav.search.journeys', {
+						views: {
+							'previewContent': {
+								templateUrl : 'templates/journeys.html'
 							}
 						}	
-					}).state('nav.search.references', {
+					}).state('nav.search.perspectives', {
 						views: {
 							'previewContent': {
-								templateUrl : 'templates/references.html'
+								templateUrl : 'templates/perspectives.html'
 							}
 						}						
 					}).state('nav.details', {

@@ -6,28 +6,39 @@
           {{title}}
           <img ng-src="images/icons/{{title}}.png" width="80px">
         </div>
-        <div class="button-container" >
-          <div class="button-circle" ng-class="[style.theme,selected==1 ? 'selected':'']"></div>
-          <div class="button button-full" ng-click="selected=1"
-          ng-class="['button-' +style.theme, selected==1 ?'button-outline':'']">
-            Introduction
+        <ul>
+       	<li class="button-container"  ng-click="selected=1">
+          <div class="button-circle" ng-class="[style.theme,selected==1 ? 'selected':'']"></div> 
+          <div class="button-side"
+          ng-class="[style.theme, selected==1 ?'button-outline':'']"
+          ui-sref="nav.search.introduction">
+            An Introduction
           </div>
+        </li>
+        <li class="button-container" ng-click="selected=2">
           <div class="button-circle" ng-class="[style.theme,selected==2 ? 'selected':'']"></div> 
-          <div class="button button-full" ng-click="selected=2"
-          ng-class="['button-' +style.theme, selected==2 ?'button-outline':'']">
+          <div class="button-side" 
+          ng-class="[style.theme, selected==2 ?'button-outline':'']"
+          ui-sref="nav.search.perspectives">
             Perspectives
-          </div>       
-          <div class="button-circle" ng-class="[style.theme,selected==3 ? 'selected':'']"></div> 
-          <div class="button button-full" ng-click="selected=3"
-          ng-class="['button-' +style.theme,selected==3 ?'button-outline':'']">
-            Paths To Value
           </div>
-        </div>
+        </li>
+        <li class="button-container" ng-click="selected=3">
+          <div class="button-circle" ng-class="[style.theme,selected==3 ? 'selected':'']"></div> 
+          <div class="button-side" 
+          ng-class="[style.theme,selected==3 ?'button-outline':'']"
+          ui-sref="nav.search.journeys">
+            Client Journeys
+          </div>
+        </li>
+        
+        </ul>
+
       </div>
       
       
       <div class="col">
-      	<ion-nav-view name="previewContent"></ion-nav-view>
+     	<ion-nav-view name="previewContent" animation="no-animation"></ion-nav-view>
       </div>
     </div>
   </ion-content>

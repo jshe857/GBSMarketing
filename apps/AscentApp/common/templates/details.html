@@ -1,5 +1,12 @@
 <ion-view>
 <ion-content style="background:url(media/test/crossword.png) repeat">
+<ion-nav-buttons side="left">
+      <button class="button button-icon" ng-click="">
+      Favourite
+        <i class="icon energized" ng-class="favourite() ?'ion-ios7-star' :'ion-ios7-star-outline' ">
+        </i>
+      </button>
+</ion-nav-buttons>
 <div class="row responsive-md" style="padding-top:20px">
 	<a class="card col media" ng-href="{{getUrl(media.id)}}" ng-style="setBackground()" target="_self">
 			<img class="play-icon" width="250px" src="images/play.png">

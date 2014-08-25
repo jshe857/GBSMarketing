@@ -8357,58 +8357,45 @@ a.button {
   right: 0;
   bottom: 0; }
 
-.side-left.positive {
-  background: #bdded5; }
-  .side-left.positive .button-circle.positive {
-    background: #00afda; }
-  .side-left.positive .button-circle.positive.selected {
-    background: #0075ab; }
-
-.side-left.balanced {
-  background: #819b5c; }
-  .side-left.balanced .button-circle.balanced {
-    background: #8cc63e; }
-  .side-left.balanced .button-circle.balanced.selected {
-    background: #008951; }
-
-.side-left.energized {
-  background: #ffe471; }
-  .side-left.energized .button-circle.energized {
-    background: #fdb811; }
-  .side-left.energized .button-circle.energized.selected {
-    background: #ffef4a; }
-
 .side-left {
-  padding: 0 0 0 0; }
+  padding: 0 0 0 0;
+  overflow: hidden;
+  overflow-y: auto; }
   .side-left img {
     margin-bottom: -15px; }
-  .side-left .button.button-full.button-outline {
-    background: white; }
-  .side-left .button.button-full {
-    text-align: left;
-    font-family: "Lubalin";
-    font-size: 30px;
-    border: 0px;
-    margin: 66.66667px 0 66.66667px 0;
-    height: 83px;
-    line-height: 83px; }
   .side-left .header {
     color: white;
-    padding-bottom: 120px;
+    padding-bottom: 90px;
     margin-left: 25px; }
+  .side-left .button-outline {
+    background: white; }
   .side-left .button-circle {
-    margin-top: -11.11111px;
-    margin-left: -25px;
-    margin-right: 25px;
-    float: left;
-    height: 100px;
-    width: 100px;
-    border-radius: 100px;
+    position: absolute;
+    width: 20%;
+    height: 0;
+    top: 170%;
+    left: -13%;
+    padding-bottom: 19%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
     border: 3px solid white;
     z-index: 999;
     position: relative; }
   .side-left .button-container {
-    margin-left: 140px; }
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-left: 30%;
+    margin-top: 15%; }
+  .side-left .button-side {
+    padding: 28.57143px 0;
+    padding-left: 8%;
+    text-align: left;
+    overflow: hidden;
+    font-family: "Lubalin";
+    font-size: 2.1em;
+    width: 80%; }
 
 .side-right {
   background: #001934; }
@@ -8424,6 +8411,14 @@ a.button {
     border-radius: 45px;
     margin-right: 10px; }
 
+.circle {
+  width: 50%;
+  height: 0;
+  padding-bottom: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%; }
+
 .landing {
   background: url("../images/lighthouse.jpg");
   background-size: 100% 100%;
@@ -8438,7 +8433,7 @@ a.button {
   .landing .landing-button {
     border-color: white;
     font-size: 20px;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -8452,7 +8447,8 @@ a.button {
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease; }
+    -o-transition: all 0.5s ease;
+    z-index: 100; }
   .landing .landing-button.small-button {
     display: inline-block;
     font-size: 12px;
@@ -8461,18 +8457,83 @@ a.button {
     border-radius: 120px;
     border-width: 6px;
     z-index: 20; }
+  .landing .indicator {
+    position: absolute;
+    bottom: 10px;
+    left: 48%; }
 
 .invisible {
   display: none; }
 
 .dot-container {
-  margin: -110px 0 -30px 0; }
+  margin: -110px 0 -30px 0;
+  z-index: 1; }
   .dot-container .dot {
     height: 10px;
     width: 10px;
     border-radius: 20px;
     margin: 10px auto;
     background: white; }
+
+.side-left.positive {
+  background: #bdded5; }
+  .side-left.positive .button-circle.positive {
+    background: #00afda; }
+  .side-left.positive .button-circle.positive.selected {
+    background: #0075ab; }
+  .side-left.positive .button-side.positive {
+    background: #00afda;
+    color: white; }
+  .side-left.positive .button-side.positive.button-outline {
+    background: white;
+    color: #0075ab; }
+
+.header-bar.positive {
+  background: #00afda;
+  color: #bdded5; }
+
+.preview-content .positive.header.title {
+  color: #00afda; }
+
+.side-left.balanced {
+  background: #819b5c; }
+  .side-left.balanced .button-circle.balanced {
+    background: #8cc63e; }
+  .side-left.balanced .button-circle.balanced.selected {
+    background: #008951; }
+  .side-left.balanced .button-side.balanced {
+    background: #8cc63e;
+    color: white; }
+  .side-left.balanced .button-side.balanced.button-outline {
+    background: white;
+    color: #008951; }
+
+.header-bar.balanced {
+  background: #8cc63e;
+  color: #819b5c; }
+
+.preview-content .balanced.header.title {
+  color: #008951; }
+
+.side-left.energized {
+  background: #ffe471; }
+  .side-left.energized .button-circle.energized {
+    background: #fdb811; }
+  .side-left.energized .button-circle.energized.selected {
+    background: #ffef4a; }
+  .side-left.energized .button-side.energized {
+    background: #fdb811;
+    color: white; }
+  .side-left.energized .button-side.energized.button-outline {
+    background: white;
+    color: #ffef4a; }
+
+.header-bar.energized {
+  background: #fdb811;
+  color: #ffe471; }
+
+.preview-content .energized.header.title {
+  color: #fdb811; }
 
 @-webkit-keyframes fadeOut {
   0% {
@@ -8533,12 +8594,8 @@ body {
 
 .header {
   padding: 45px 0 10px 0;
-  font-size: 40px; }
-
-.select {
-  position: absolute;
-  top: 30%;
-  width: 90%; }
+  font-size: 40px;
+  line-height: 35px; }
 
 .row {
   padding: 0 0 0 0; }
@@ -8553,5 +8610,20 @@ body {
   width: 100%;
   z-index: 999; }
 
-.article-body {
-  line-height: 180%; }
+.article {
+  text-align: center;
+  line-height: 180%;
+  margin-left: 10%;
+  margin-right: 10%; }
+
+.preview-content {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
+
+.header-bar {
+  font-size: 20px;
+  padding: 5px 0; }
+
+.col {
+  padding: 0; }

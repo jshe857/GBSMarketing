@@ -1,18 +1,22 @@
 $positive:#00afda;
+$positive-text:#00afda;
 $positive-selected:#0075ab;
 $positive-background:#bdded5;
 
 $energized:#fdb811;
+$energized-text:#00afda;
 $energized-selected:#ffef4a;
 $energized-background: #ffe471;
 
-
 $balanced:#8cc63e;
+$balanced-dark:#008951;
+$balanced-text:#00afda;
 $balanced-selected:#008951;
 $balanced-background: #819b5c;
 
 $bigblue: #001934;
 $bigblue-background: #006792;
+
 $preview-padding: 45px;
 
 @import "ionic/ionic";
@@ -21,6 +25,7 @@ $preview-padding: 45px;
 @import "_media";
 @import "_sidemenus";
 @import "_start";
+@import "_theme";
 @import "_animate";
 
 body {
@@ -35,12 +40,7 @@ body {
 .header {
 	padding:$preview-padding 0 10px 0;
 	font-size:40px;
-}
-
-.select {
-	position:absolute;
-	top:30%;
-	width: 90%;
+	line-height:35px;
 }
 
 .row {
@@ -57,7 +57,21 @@ body {
 	width:100%;
 	z-index:999;
 }
-.article-body {
+.article {
+	text-align:center;
 	line-height:180%;
+	margin-left:10%;
+	margin-right:10%;
 }
-
+.preview-content {
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+.header-bar {
+	font-size:20px;
+	padding: 5px 0;
+}
+.col {
+	padding: 0;
+}

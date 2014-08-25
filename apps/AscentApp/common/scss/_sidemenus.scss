@@ -1,63 +1,51 @@
 $button-size:100px;
-
-@mixin theme($name,$color,$background,$selected) {
-	.side-left.#{$name} {
-		background:$background;
-		
-		.button-circle.#{$name} {
-			background:$color;
-		}
-		.button-circle.#{$name}.selected {
-			background:$selected;
-		}
-		.button.button-full.button-#{$name} {
-			 
-		}
-	}
-}
-@include theme(positive,$positive,$positive-background,$positive-selected);
-@include theme(balanced,$balanced,$balanced-background,$balanced-selected);
-@include theme(energized,$energized,$energized-background,$energized-selected);
-
-
+$left-percent:30%;
 
 .side-left {
 	padding: 0 0 0 0;
 	img {
-		margin-bottom:-15px
-	}
-	.button.button-full.button-outline {
-		background:white;
-	}
-	.button.button-full {
-		text-align:left;
-		font-family: "Lubalin";
-		font-size:30px;
-		border:0px;
-		margin: $button-size/1.5 0 $button-size/1.5 0;
-		height: $button-size - 17;
-		line-height:$button-size - 17;
+		margin-bottom:-15px;
 	}
 	.header {
 		color: white;
-		padding-bottom:120px;
+		padding-bottom:90px;
 		margin-left:25px;
 	}
+	.button-outline {
+		background:white;
+	}
 	.button-circle {
-		margin-top:-$button-size/9;
-		margin-left:-$button-size/4;
-		margin-right:$button-size/4;		
-		float:left;
-		height:$button-size;
-		width:$button-size;
-		border-radius:$button-size;	
+		position:absolute;
+ 		width: 20%;
+    	height:0;
+    	top: 170%;
+    	left: -13%;
+    	padding-bottom: 19%;
+    	   -moz-border-radius: 100%; 
+    	-webkit-border-radius: 100%; 
+    			border-radius: 100%;
 		border: 3px solid white;
 		z-index:999;
 		position:relative;
 	}	
 	.button-container {
-		margin-left:140px;
+		display:block;
+		width:100%;
+		height:50px;
+		margin-left:$left-percent;
+		margin-top:15%;
 	}
+	.button-side {
+		padding: $button-size/3.5 0;
+		padding-left:8%;
+		text-align:left;
+		overflow:hidden;
+		font-family: "Lubalin";
+		font-size:2.1em;
+		width:80%;
+	}
+	overflow:hidden;
+	overflow-y:auto;
 }
 
 .side-right {
@@ -75,6 +63,15 @@ $button-size:100px;
 		border-radius:45px;
 		margin-right:10px;
 	}
+}
+
+.circle {
+    width: 50%;
+    height:0;
+    padding-bottom: 50%;
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    border-radius: 50%;
 }
 
 
