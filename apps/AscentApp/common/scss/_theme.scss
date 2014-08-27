@@ -16,6 +16,7 @@
 			background:white;
 			color:$selected;	 
 		}
+
 	}
 	.header-bar.#{$name} {
 		background: $color;
@@ -23,6 +24,10 @@
 	}
 	.preview-content .#{$name}.header.title{
 		color:$text;	
+	}
+	.icon.#{$name} {
+		background:$color !important;
+		color:white;
 	}
 }
 @include theme(positive,$positive,$positive-background,$positive-selected,$positive);

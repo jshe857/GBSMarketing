@@ -14,27 +14,27 @@ var ascent = angular.module('Ascent', [ 'ionic' ]).config(
 								controller : 'StartCtrl'
 							}
 						}
-					}).state('nav.search', {
-						url : '/search?searchKey&title&theme',
+					}).state('nav.category', {
+						url : '/category?searchKey&title&theme',
 						views : {
 							'menuContent' : {
 								templateUrl : 'templates/preview.html',
 								controller : 'PreviewCtrl'
 							}
 						}
-					}).state('nav.search.introduction', {
+					}).state('nav.category.introduction', {
 						views: {
 							'previewContent': {
 								templateUrl : 'templates/introduction.html'
 							}
 						}
-					}).state('nav.search.journeys', {
+					}).state('nav.category.journeys', {
 						views: {
 							'previewContent': {
 								templateUrl : 'templates/journeys.html'
 							}
 						}	
-					}).state('nav.search.perspectives', {
+					}).state('nav.category.perspectives', {
 						views: {
 							'previewContent': {
 								templateUrl : 'templates/perspectives.html'
@@ -46,6 +46,14 @@ var ascent = angular.module('Ascent', [ 'ionic' ]).config(
 							'menuContent' : {
 								templateUrl : 'templates/details.html',
 								controller : 'DetailsCtrl'
+							}
+						}
+					}).state('nav.search', {
+						url: '/search',
+						views : {
+							'menuContent' : {
+								templateUrl : 'templates/search.html',
+								controller : 'SearchCtrl'
 							}
 						}
 					});

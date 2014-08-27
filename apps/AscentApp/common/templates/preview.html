@@ -6,34 +6,33 @@
           {{title}}
           <img ng-src="images/icons/{{title}}.png" width="80px">
         </div>
+
+        <div>
         <ul>
-       	<li class="button-container"  ng-click="selected=1">
+       	<li class="button-container"  ng-click="selected=1" ui-sref="nav.category.introduction">
           <div class="button-circle" ng-class="[style.theme,selected==1 ? 'selected':'']"></div> 
           <div class="button-side"
-          ng-class="[style.theme, selected==1 ?'button-outline':'']"
-          ui-sref="nav.search.introduction">
+          ng-class="[style.theme, selected==1 ?'button-outline':'']">
             An Introduction
           </div>
         </li>
-        <li class="button-container" ng-click="selected=2">
+        <li class="button-container" ng-click="selected=2" ui-sref="nav.category.perspectives">
           <div class="button-circle" ng-class="[style.theme,selected==2 ? 'selected':'']"></div> 
           <div class="button-side" 
-          ng-class="[style.theme, selected==2 ?'button-outline':'']"
-          ui-sref="nav.search.perspectives">
+          ng-class="[style.theme, selected==2 ?'button-outline':'']">
             Perspectives
           </div>
         </li>
-        <li class="button-container" ng-click="selected=3">
+        <li class="button-container" ng-click="selected=3" ui-sref="nav.category.journeys">
           <div class="button-circle" ng-class="[style.theme,selected==3 ? 'selected':'']"></div> 
           <div class="button-side" 
-          ng-class="[style.theme,selected==3 ?'button-outline':'']"
-          ui-sref="nav.search.journeys">
+          ng-class="[style.theme,selected==3 ?'button-outline':'']">
             Client Journeys
           </div>
         </li>
         
         </ul>
-
+      </div>
       </div>
       
       

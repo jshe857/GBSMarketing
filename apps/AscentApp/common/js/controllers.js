@@ -49,9 +49,11 @@ ascent.controller(
 					media : JSON.stringify(row)
 				});
 			};
-			
+			$scope.range= function(n) {
+				return new Array(n);
+			};
 			$scope.selected = 1;
-}).controller('DetailsCtrl', function($scope, $stateParams, $http, FavouriteService) {
+}).controller('DetailsCtrl', function($scope, $stateParams, $http, FavouriteService,$ionicPopup) {
 	var favourites = FavouriteService;
 	$scope.media = angular.fromJson($stateParams.media);
 	$http.get("media/" + $scope.media.id + "/main.txt").success(function(data) {
@@ -63,13 +65,16 @@ ascent.controller(
 			'background-image' : 'url("' + url + '")'
 		};
 	};
-	$scope.favourite = function() {
-		console.log("index:" + favourites.indexOf($scope.media));
-		if (favourites.indexOf($scope.media) != -1) {
-			
-			return true;
-		}
-		return false;
+	$scope.addFavourites =function() {
+		var result = $ionicPopup.confirm({
+			title: 'Favourites',
+			template: 'Would you like to add this article to your favourites page?'
+		});
+		result.then(function() {
+			if (result) {
+				FavouriteService.add($scope.media);
+			}
+		});
 	};
 	
 }).controller('FormCtrl', function($scope, EmailService) {

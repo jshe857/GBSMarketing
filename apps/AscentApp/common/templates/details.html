@@ -1,13 +1,32 @@
 <ion-view>
 <ion-content style="background:url(media/test/crossword.png) repeat">
-<ion-nav-buttons side="left">
-      <button class="button button-icon" ng-click="">
-      Favourite
-        <i class="icon energized" ng-class="favourite() ?'ion-ios7-star' :'ion-ios7-star-outline' ">
-        </i>
-      </button>
-</ion-nav-buttons>
-<div class="row responsive-md" style="padding-top:20px">
+<div class="social-bar row">
+<div class="col" style="margin-left:7%">
+<i class="icon ion-ios7-heart energized" ng-click="addFavourites()" style="color:red"></i>
+Favourite
+</div>
+<div class="col">
+<i class="icon ion-social-twitter positive"></i>
+Tweet
+</div>
+<div class="col">
+<i class="icon ion-social-linkedin "></i>
+Share Link
+</div>
+<div class="col">
+<i class="icon ion-social-facebook "></i>
+Post
+</div>
+<div class="col">
+<i class="icon ion-ios7-email energized"></i>
+Email
+</div>
+<div class="col" style="margin-right:7%">
+<i class="icon ion-arrow-graph-up-right balanced" ng-click="modal.show()"></i>
+Share Lead
+</div>
+</div>
+<div class="row responsive-md" style>
 	<a class="card col media" ng-href="{{getUrl(media.id)}}" ng-style="setBackground()" target="_self">
 			<img class="play-icon" width="250px" src="images/play.png">
 <!-- 				<iframe width ="100%" height="100%" ng-src="{{getUrl(media.id)}}" allowfullscreen frameborder="0"></iframe> -->
