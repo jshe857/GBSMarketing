@@ -1,8 +1,11 @@
 <ion-view>
-<ion-content style="background:url(media/test/crossword.png) repeat">
+<ion-nav-buttons ng-if="prevState" side="left">
+<a ng-click="back();" class="button button-icon ion-ios7-arrow-back">{{prevState}}</a>
+</ion-nav-buttons>
+<ion-content>
 <div class="social-bar row">
-<div class="col" style="margin-left:7%">
-<i class="icon ion-ios7-heart energized" ng-click="addFavourites()" style="color:red"></i>
+<div class="col" style="margin-left:6%">
+<i class="icon ion-ios7-heart energized" ng-click="addFavourites()"></i>
 Favourite
 </div>
 <div class="col">
@@ -10,18 +13,18 @@ Favourite
 Tweet
 </div>
 <div class="col">
-<i class="icon ion-social-linkedin "></i>
+<i class="icon ion-social-linkedin" style="color:#007bb1"></i>
 Share Link
 </div>
 <div class="col">
-<i class="icon ion-social-facebook "></i>
+<i class="icon ion-social-facebook" style="background:#395699; color:white"></i>
 Post
 </div>
 <div class="col">
 <i class="icon ion-ios7-email energized"></i>
 Email
 </div>
-<div class="col" style="margin-right:7%">
+<div class="col" style="margin-right:6%">
 <i class="icon ion-arrow-graph-up-right balanced" ng-click="modal.show()"></i>
 Share Lead
 </div>

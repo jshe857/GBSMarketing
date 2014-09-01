@@ -7,7 +7,6 @@
           <ion-content class="side-right">
 				<div class="list">
 					<div class="item" ui-sref="nav.start" menu-close>Home</div>
-					<div class="item" ui-sref="nav.search">Search</div>
 					<div ng-repeat="(key,value) in searchstore" >
 						<div ng-hide="key=='search'" class="item ibm-icon" ng-click="searchstore.search(key)" menu-close>
 							<img ng-src="images/icons/{{key}}.png">

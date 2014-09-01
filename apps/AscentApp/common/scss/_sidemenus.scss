@@ -1,51 +1,49 @@
 $button-size:20%;
-$left-percent:35%;
+$left-percent:25%;
 
 .side-left {
+	overflow:hidden;
+	overflow-y:auto;
 	padding: 0 0 0 0;
 	img {
 		margin-bottom:-15px;
 	}
 	.header {
 		color: white;
-		padding-bottom:90px;
-		margin-left:25px;
+		padding-bottom:55%;
+		margin-left:5%;
 	}
 	.button-outline {
 		background:white;
 	}
-	.button-circle {
-		position: absolute;
-		top:170%;
-		left:-15%;
-		width:0;
-    	height:0;
-    	padding: 9%;
-    	   -moz-border-radius: 100%; 
-    	-webkit-border-radius: 100%; 
-    			border-radius: 100%;
-		border: 3px solid white;
-		z-index:999;
-		position:relative;
-	}	
 	.button-container {
 		display:block;
+		position:relative;
 		width:100%;
-		height:50px;
 		margin-left:$left-percent;
-		margin-top:15%;
+		margin-top:10%;
+		
 	}
 	.button-side {
 		padding: $button-size/4 0;
-		padding-left:8%;
+		padding-left:14%;
 		text-align:left;
 		overflow:hidden;
 		font-family: "Lubalin";
-		font-size:160%;
+		font-size:20px;
 		width:80%;
 	}
-	overflow:hidden;
-	overflow-y:auto;
+
+	.button-circle {
+		position:absolute;
+		top:-20%;
+		left:-10%;
+	    width: 21%;
+	    height:0;
+	    padding-bottom: 19%;
+	   border:4px solid white;
+	    border-radius:100%;
+	}
 }
 
 .side-right {
@@ -65,14 +63,6 @@ $left-percent:35%;
 	}
 }
 
-.circle {
-    width: 50%;
-    height:0;
-    padding-bottom: 50%;
-    -moz-border-radius: 50%; 
-    -webkit-border-radius: 50%; 
-    border-radius: 50%;
-}
 
 
 

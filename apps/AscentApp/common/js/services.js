@@ -1,3 +1,15 @@
+var ID=0;
+var TITLE=1;
+var COUNTRY=2;
+var CLOUD=3;
+var ANALYTICS=4;
+var MOBILE=5;
+var SOCIAL=6;
+var BANKING=7;
+var GOVERNMENT=8;
+var TELECOMMUNICATIONS=9;
+var MINING=10;
+
 var favouritesKey = "favourites";
 ascent
 		.factory(
@@ -27,6 +39,9 @@ ascent
 									+ searchColumn + '=1', [], addToList,
 									errorCB);
 						};
+						var getDB = function(tx) {
+							tx.executeSql('SELECT * FROM MEDIA',[],addToList,errorCB);
+						};
 
 						var addToList = function(tx, results) {
 							$rootScope.list = new Array();
@@ -37,8 +52,7 @@ ascent
 							}
 						};
 						this.queryAll = function() {
-							searchColumn = "1";
-							this.db.transaction(queryDB, errorCB);
+							this.db.transaction(getDB,errorCB);
 						};
 						this.queryKey = function(key) {
 							searchColumn = key;

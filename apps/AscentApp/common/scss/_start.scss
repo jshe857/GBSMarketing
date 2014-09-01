@@ -15,7 +15,6 @@ $icon-size:45px;
 		opacity:0;
 	}	
 	.landing-button {
-		border-color:white;
 		font-size:20px;
 		margin: 0 auto;
 		display: flex;
@@ -23,12 +22,13 @@ $icon-size:45px;
 		align-content:center;
 		flex-direction:column; 
     	text-align: center;
+		border-color:white;
 	}
 	.landing-button.big-button {	
-		height:$big-size;
-		width:$big-size;
-		border-radius:$big-size;
-		border-width:$big-size /20;
+		height:42%;
+		width:78%;
+		border-radius:100%;
+		border-width:10px;
 		transition: all 0.5s ease;
 		-webkit-transition: all 0.5s ease;
     	-moz-transition: all 0.5s ease;
@@ -49,8 +49,7 @@ $icon-size:45px;
 		position:absolute;
 		bottom:10px; 
 		left:46%;
-	}
-
+	}	
 }
 
 .invisible {

@@ -1,5 +1,22 @@
 <ion-view>
-<ion-content>
-<div class="card"></div>
+<ion-content has-header="true">
+<div class="card">
+<div class="list">
+  <label class="item item-input">
+    <input type="text" placeholder="Search" ng-model="searchInput">    
+    <button class="button button-icon icon ion-search"></button>
+  </label>
+ </div>
+</div>
+<div class="list">
+    <div class="item item-avatar" 
+    ng-repeat="row in list | filter:searchInput" 
+    ng-click="getDetails(row)">
+      <img ng-src="{{getImage(row.id)}}">
+      <h2>{{row.title}}</h2>
+      <p>{{row.body}}</p>
+    </div>
+</div>
+
 </ion-content>
 </ion-view>

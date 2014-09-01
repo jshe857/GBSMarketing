@@ -1,7 +1,7 @@
 ascent.controller(
 		'MainCtrl',
 		function($scope, $http, DBService, SearchStore, $window, $sce,
-				$ionicModal, $ionicSideMenuDelegate) {
+				$ionicModal, $ionicSideMenuDelegate,$state) {
 			$http.get("insert.json").success(function(data) {
 				var db = new DBService();
 				db.insertData(data);
@@ -19,7 +19,7 @@ ascent.controller(
 			});
 			$scope.focusMenu = function() {
 				return $ionicSideMenuDelegate.isOpen();
-			}
+			};
 			$scope.toggleRight = function() {
 				$ionicSideMenuDelegate.toggleRight();
 			};
@@ -34,6 +34,11 @@ ascent.controller(
 				return $sce.trustAsResourceUrl('http://www.youtube.com/embed/'
 						+ id);
 			};
+			$scope.getDetails = function(row) {
+				$state.go('nav.details', {
+					media : JSON.stringify(row)
+				});
+			};
 		}).controller('StartCtrl', function($scope, $state) {
 
 }).controller('PreviewCtrl',
@@ -44,17 +49,22 @@ ascent.controller(
 			$scope.style = {
 					theme: $stateParams.theme
 			};
-			$scope.getDetails = function(row) {
-				$state.go('nav.details', {
-					media : JSON.stringify(row)
-				});
-			};
+			$scope.state=$state;
+
 			$scope.range= function(n) {
 				return new Array(n);
 			};
 			$scope.selected = 1;
-}).controller('DetailsCtrl', function($scope, $stateParams, $http, FavouriteService,$ionicPopup) {
+}).controller('DetailsCtrl', function($scope, $stateParams, $http, FavouriteService,$ionicPopup,$window) {
 	var favourites = FavouriteService;
+	$scope.$on('$stateChangeSuccess', function (ev, to, toParams, from, fromParams) {
+		var state = from.name.split('.');
+		var name = state[state.length-1];
+		$scope.prevState = name.charAt(0).toUpperCase() + name.slice(1);
+	});
+	$scope.back = function() {
+		$window.history.back();
+	};
 	$scope.media = angular.fromJson($stateParams.media);
 	$http.get("media/" + $scope.media.id + "/main.txt").success(function(data) {
 		$scope.media.body = data;
@@ -82,4 +92,6 @@ ascent.controller(
 	$scope.send = function(client) {
 		EmailService.send(client);
 	};
+}).controller('SearchCtrl', function($scope,$rootScope) {
+	$scope.db.queryAll();
 });

@@ -8331,7 +8331,7 @@ a.button {
   .carousel .item {
     border-color: white; }
   .carousel .col-33.card {
-    font-size: 0.7vw; }
+    font-size: 10% !important; }
   .carousel span.icon-span {
     display: inline-block;
     width: 24px;
@@ -8358,44 +8358,40 @@ a.button {
   bottom: 0; }
 
 .side-left {
-  padding: 0 0 0 0;
   overflow: hidden;
-  overflow-y: auto; }
+  overflow-y: auto;
+  padding: 0 0 0 0; }
   .side-left img {
     margin-bottom: -15px; }
   .side-left .header {
     color: white;
-    padding-bottom: 90px;
-    margin-left: 25px; }
+    padding-bottom: 55%;
+    margin-left: 5%; }
   .side-left .button-outline {
     background: white; }
-  .side-left .button-circle {
-    position: absolute;
-    top: 170%;
-    left: -15%;
-    width: 0;
-    height: 0;
-    padding: 9%;
-    -moz-border-radius: 100%;
-    -webkit-border-radius: 100%;
-    border-radius: 100%;
-    border: 3px solid white;
-    z-index: 999;
-    position: relative; }
   .side-left .button-container {
     display: block;
+    position: relative;
     width: 100%;
-    height: 50px;
-    margin-left: 35%;
-    margin-top: 15%; }
+    margin-left: 25%;
+    margin-top: 10%; }
   .side-left .button-side {
     padding: 5% 0;
-    padding-left: 8%;
+    padding-left: 14%;
     text-align: left;
     overflow: hidden;
     font-family: "Lubalin";
-    font-size: 160%;
+    font-size: 20px;
     width: 80%; }
+  .side-left .button-circle {
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 21%;
+    height: 0;
+    padding-bottom: 19%;
+    border: 4px solid white;
+    border-radius: 100%; }
 
 .side-right {
   background: #001934; }
@@ -8411,14 +8407,6 @@ a.button {
     border-radius: 45px;
     margin-right: 10px; }
 
-.circle {
-  width: 50%;
-  height: 0;
-  padding-bottom: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%; }
-
 .landing {
   background: url("../images/lighthouse.jpg");
   background-size: 100% 100%;
@@ -8431,19 +8419,19 @@ a.button {
     border-bottom: thin solid white;
     opacity: 0; }
   .landing .landing-button {
-    border-color: white;
     font-size: 20px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    text-align: center; }
+    text-align: center;
+    border-color: white; }
   .landing .landing-button.big-button {
-    height: 300px;
-    width: 300px;
-    border-radius: 300px;
-    border-width: 15px;
+    height: 42%;
+    width: 78%;
+    border-radius: 100%;
+    border-width: 10px;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -8483,8 +8471,8 @@ a.button {
     color: #0075ab; }
 
 .header-bar.positive {
-  background: #00afda;
-  color: #bdded5; }
+  background: #0075ab;
+  color: #00afda; }
 
 .preview-content .positive.header.title {
   color: #00afda; }
@@ -8496,25 +8484,25 @@ a.button {
 .side-left.balanced {
   background: #819b5c; }
   .side-left.balanced .button-circle.balanced {
-    background: #8cc63e; }
-  .side-left.balanced .button-circle.balanced.selected {
     background: #008951; }
+  .side-left.balanced .button-circle.balanced.selected {
+    background: #8cc63e; }
   .side-left.balanced .button-side.balanced {
-    background: #8cc63e;
+    background: #577a25;
     color: white; }
   .side-left.balanced .button-side.balanced.button-outline {
     background: white;
-    color: #008951; }
+    color: #48720a; }
 
 .header-bar.balanced {
   background: #8cc63e;
-  color: #819b5c; }
+  color: #577a25; }
 
 .preview-content .balanced.header.title {
   color: #008951; }
 
 .icon.balanced {
-  background: #8cc63e !important;
+  background: #577a25 !important;
   color: white; }
 
 .side-left.energized {
@@ -8531,8 +8519,8 @@ a.button {
     color: #ffef4a; }
 
 .header-bar.energized {
-  background: #fdb811;
-  color: #ffe471; }
+  background: #ffef4a;
+  color: #fdb811; }
 
 .preview-content .energized.header.title {
   color: #fdb811; }
@@ -8600,8 +8588,7 @@ body {
 
 .header {
   padding: 10px 0 10px 0;
-  font-size: 200%;
-  line-height: 35px; }
+  font-size: 200%; }
 
 .row {
   padding: 0 0 0 0; }
@@ -8646,10 +8633,10 @@ body {
   .social-bar .icon {
     display: block;
     padding-top: 5px;
-    font-size: 30px;
+    font-size: 20px;
     margin: auto;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     text-align: center;
     background: white; }
   .social-bar .col {

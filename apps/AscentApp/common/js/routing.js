@@ -21,20 +21,24 @@ var ascent = angular.module('Ascent', [ 'ionic' ]).config(
 								templateUrl : 'templates/preview.html',
 								controller : 'PreviewCtrl'
 							}
-						}
+						},
+						abstract:true
 					}).state('nav.category.introduction', {
+						url : '/introduction',
 						views: {
 							'previewContent': {
 								templateUrl : 'templates/introduction.html'
 							}
 						}
 					}).state('nav.category.journeys', {
+						url : '/journeys',
 						views: {
 							'previewContent': {
 								templateUrl : 'templates/journeys.html'
 							}
 						}	
 					}).state('nav.category.perspectives', {
+						url : '/perspectives',
 						views: {
 							'previewContent': {
 								templateUrl : 'templates/perspectives.html'
