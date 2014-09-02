@@ -60,6 +60,14 @@ var ascent = angular.module('Ascent', [ 'ionic' ]).config(
 								controller : 'SearchCtrl'
 							}
 						}
+					}).state('nav.favourites', {
+						url:'/favourites',
+						views : {
+							'menuContent' : {
+								templateUrl : 'templates/favourites.html',
+								controller : 'FavouritesCtrl'
+							}
+						}
 					});
 					$urlRouterProvider.otherwise('/nav/start');
 				} ]);

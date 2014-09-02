@@ -31,6 +31,6 @@
 	}
 }
 
-@include theme(positive,$positive-background,$positive,$positive,$positive-selected,$positive-selected,$positive);
+@include theme(positive,#004165,#00688f,#00afda,#175876,$positive-selected,$positive);
 @include theme(balanced,#819b5c,#577a25,#008951,#48720a,#8cc63e,#008951);
 @include theme(energized,$energized-background,$energized,$energized,$energized-selected,$energized-selected,$energized);

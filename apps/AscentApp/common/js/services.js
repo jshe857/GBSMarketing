@@ -23,14 +23,15 @@ ascent
 
 						var errorCB = function(err) {
 							console.log("Error processing SQL: " + err.code);
+							console.log(err);
 						};
 						var populateDB = function(tx) {
 							tx.executeSql('DROP TABLE IF EXISTS MEDIA');
 							tx
-									.executeSql('CREATE TABLE IF NOT EXISTS MEDIA (id unique, title VARCHAR,country VARCHAR, c BIT,a BIT,m BIT,s BIT,bank BIT, govt BIT, telecom BIT, mine BIT)');
+									.executeSql('CREATE TABLE IF NOT EXISTS MEDIA (id unique, title VARCHAR,company VARCHAR,country VARCHAR, c BIT,a BIT,m BIT,s BIT,bank BIT, govt BIT, telecom BIT, mine BIT)');
 							for (var i = 0; i < mediaData.length; i++) {
 								tx
-										.executeSql('INSERT INTO MEDIA (id, title,country,c,a,m,s,bank,govt,telecom,mine) VALUES ('
+										.executeSql('INSERT INTO MEDIA (id, title,company,country,c,a,m,s,bank,govt,telecom,mine) VALUES ('
 												+ mediaData[i] + ')');
 							}
 						};
@@ -97,8 +98,10 @@ ascent
 				favourites = [];
 			}
 			favourites.add = function(media){
-				this.push(media);
-				localStorage.setItem(favouritesKey,angular.toJson(this));
+				if (this.indexOf(media) == -1) {
+					this.push(media);
+					localStorage.setItem(favouritesKey,angular.toJson(this));
+				}
 			};
 			favourites.remove = function(media) {
 				var index = this.indexOf(media);

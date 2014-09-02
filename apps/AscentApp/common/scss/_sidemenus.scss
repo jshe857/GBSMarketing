@@ -31,13 +31,15 @@ $left-percent:25%;
 		overflow:hidden;
 		font-family: "Lubalin";
 		font-size:20px;
-		width:80%;
+		width:100%;
 	}
-
-	.button-circle {
+	.left-align {
 		position:absolute;
 		top:-20%;
 		left:-10%;
+	}
+	.button-circle {
+		
 	    width: 21%;
 	    height:0;
 	    padding-bottom: 19%;

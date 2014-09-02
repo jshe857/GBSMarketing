@@ -12,9 +12,9 @@
     <div class="item item-avatar" 
     ng-repeat="row in list | filter:searchInput" 
     ng-click="getDetails(row)">
-      <img ng-src="{{getImage(row.id)}}">
-      <h2>{{row.title}}</h2>
-      <p>{{row.body}}</p>
+      <img ng-src="{{getThumbnail(row.id)}}">
+      <h2>{{row.company}}</h2>
+      <p>{{row.title}}</p>
     </div>
 </div>
 

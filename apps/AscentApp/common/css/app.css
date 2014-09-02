@@ -8382,11 +8382,12 @@ a.button {
     overflow: hidden;
     font-family: "Lubalin";
     font-size: 20px;
-    width: 80%; }
-  .side-left .button-circle {
+    width: 100%; }
+  .side-left .left-align {
     position: absolute;
     top: -20%;
-    left: -10%;
+    left: -10%; }
+  .side-left .button-circle {
     width: 21%;
     height: 0;
     padding-bottom: 19%;
@@ -8428,8 +8429,8 @@ a.button {
     text-align: center;
     border-color: white; }
   .landing .landing-button.big-button {
-    height: 42%;
-    width: 78%;
+    height: 40%;
+    width: 85%;
     border-radius: 100%;
     border-width: 10px;
     transition: all 0.5s ease;
@@ -8458,27 +8459,27 @@ a.button {
   z-index: 1; }
 
 .side-left.positive {
-  background: #bdded5; }
+  background: #004165; }
   .side-left.positive .button-circle.positive {
     background: #00afda; }
   .side-left.positive .button-circle.positive.selected {
     background: #0075ab; }
   .side-left.positive .button-side.positive {
-    background: #00afda;
+    background: #00688f;
     color: white; }
   .side-left.positive .button-side.positive.button-outline {
     background: white;
-    color: #0075ab; }
+    color: #175876; }
 
 .header-bar.positive {
   background: #0075ab;
-  color: #00afda; }
+  color: #00688f; }
 
 .preview-content .positive.header.title {
   color: #00afda; }
 
 .icon.positive {
-  background: #00afda !important;
+  background: #00688f !important;
   color: white; }
 
 .side-left.balanced {
