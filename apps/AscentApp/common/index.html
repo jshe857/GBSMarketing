@@ -11,27 +11,31 @@
   <body ng-controller="MainCtrl">
         <ion-nav-bar class="bar-positive" animation="nav-title-slide-ios7">
           <ion-nav-buttons side="right">
-          	<a class="button button-icon ion-ios7-search-strong" ui-sref="nav.search"></a>
+          	<a ng-if="!state.includes('nav.search')" class="button button-icon ion-ios7-search-strong" ui-sref="nav.search"></a>
             <button ng-click="toggleRight()"
             class="button button-icon icon ion-navicon">
             </button>
+          </ion-nav-buttons>
+          <ion-nav-buttons side="left">
+          	<a ng-if="!(state.includes('nav.start') || state.includes('nav.details'))" class="button button-icon ion-home" ui-sref="nav.start"></a>
           </ion-nav-buttons>
         </ion-nav-bar>
         
         <ion-nav-view animation="slide-left-right">
         </ion-nav-view>
-
   <script src="js/email_composer.js">
   </script>
   <script src="ionic/js/ionic.bundle.min.js">
   </script>
   <script src="js/routing.js">
   </script>
+  <script src="js/content.js">
+  </script>
   <script src="js/controllers.js">
   </script>
   <script src="js/services.js">
   </script>
-  <script src="socialite/socialite.js">
-  </script>
+  <script src="js/directives.js">
+  </script>  
   </body>
 </html>

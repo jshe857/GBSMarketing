@@ -10,9 +10,9 @@
 </div>
 <div class="list">
     <div class="item item-avatar" 
-    ng-repeat="row in list | filter:searchInput" 
-    ng-click="getDetails(row)">
-      <img ng-src="{{getThumbnail(row.id)}}">
+    ng-repeat="row in testimonials.concat(infographics) | filter:searchInput" 
+    ng-click="details(row)">
+      <img ng-src="{{row.thumbnailUrl}}">
       <h2>{{row.company}}</h2>
       <p>{{row.title}}</p>
     </div>

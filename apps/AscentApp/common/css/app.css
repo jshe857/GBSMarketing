@@ -8331,7 +8331,7 @@ a.button {
   .carousel .item {
     border-color: white; }
   .carousel .col-33.card {
-    font-size: 10% !important; }
+    font-size: 14px !important; }
   .carousel span.icon-span {
     display: inline-block;
     width: 24px;
@@ -8343,11 +8343,10 @@ a.button {
 .media {
   position: relative;
   text-align: center;
-  background: black;
+  /*background:black;*/
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% auto;
-  height: 80%; }
+  background-size: 100% auto; }
 
 .play-icon {
   position: absolute;
@@ -8408,6 +8407,8 @@ a.button {
     border-radius: 45px;
     margin-right: 10px; }
 
+/*$small-size: 110px;*/
+/*$icon-size:45px;*/
 .landing {
   background: url("../images/lighthouse.jpg");
   background-size: 100% 100%;
@@ -8427,10 +8428,13 @@ a.button {
     align-content: center;
     flex-direction: column;
     text-align: center;
-    border-color: white; }
+    border-color: white;
+    z-index: 999; }
   .landing .landing-button.big-button {
     height: 40%;
     width: 85%;
+    /*height:$big-size;
+    width: $big-size;*/
     border-radius: 100%;
     border-width: 10px;
     transition: all 0.5s ease;
@@ -8441,11 +8445,13 @@ a.button {
   .landing .landing-button.small-button {
     display: inline-block;
     font-size: 12px;
+    /*font-size:10px;*/
     height: 120px;
     width: 120px;
-    border-radius: 120px;
+    border-radius: 100%;
     border-width: 6px;
-    z-index: 20; }
+    z-index: 20;
+    margin: 14 0 -10 0; }
   .landing .indicator {
     position: absolute;
     bottom: 10px;
@@ -8602,7 +8608,7 @@ body {
   opacity: 0.7;
   height: 100%;
   width: 100%;
-  z-index: 999; }
+  z-index: 99; }
 
 .article {
   text-align: center;
@@ -8644,3 +8650,6 @@ body {
     padding-top: 10px;
     text-align: center;
     background: #EEE; }
+
+.button.button-rounded {
+  border-radius: 2px; }

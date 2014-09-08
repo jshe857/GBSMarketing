@@ -1,26 +1,26 @@
 <div class="preview-content">
 <div style="height:60%">
-<h3 class="title header" ng-class="style.theme">Watch Our Client Testimonials</h3>
+<h3 class="title header" ng-class="page.theme" style="padding-top:7%;">Watch Our Client Testimonials</h3>
 <ion-scroll direction="x">
 <div class="row carousel">
-	<div class="card col col-33" ng-click="getDetails(row)"
-		ng-repeat="row in list">
-		<img class="full-image" ng-src="{{getImage(row.id)}}">
+	<div class="card col col-33"  ng-click="details(media)"
+		ng-repeat="media in testimonials | filter:key:strict">
+		<img class="full-image" ng-src="{{media.previewUrl}}">
 		<div class="item">
-			{{row.title}}
+			{{media.title}}
 			<div>
 				<div style="height: 20px">
-					<span class="icon-span" ng-show="row.c" style="background: #3996D5">
+					<span class="icon-span" ng-show="media.cloud" style="background: #3996D5">
 						<i class="icon ion-cloud"> </i>
-					</span> <span class="icon-span" ng-show="row.a"
+					</span> <span class="icon-span" ng-show="media.analytics"
 						style="background: #FACF8D"> <i class="icon ion-search">
 
 					</i>
-					</span> <span class="icon-span" ng-show="row.m"
+					</span> <span class="icon-span" ng-show="media.mobile"
 						style="background: #EF746D"> <i class="icon ion-iphone">
 
 					</i>
-					</span> <span class="icon-span" ng-show="row.s"
+					</span> <span class="icon-span" ng-show="media.social"
 						style="background: #31CCB0"> <i
 						class="icon ion-person-stalker"> </i>
 					</span>
@@ -31,5 +31,5 @@
 </div>
 </ion-scroll>
 </div>
-<div class="header-bar title" ng-class="style.theme">Follow A Journey Map</div>
+<div class="header-bar title" ng-class="page.theme">Follow A Journey Map</div>
 </div>

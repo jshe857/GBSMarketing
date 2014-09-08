@@ -3,15 +3,15 @@
   	<div class="overlay" ng-show="focusMenu()"></div>
     <ion-nav-view name="menuContent"></ion-nav-view>
   </ion-side-menu-content> 	
-  <ion-side-menu side="right" width="getSideMenuSize()">
+  <ion-side-menu side="right">
           <ion-content class="side-right">
 				<div class="list">
 					<div class="item" ui-sref="nav.start" menu-close>Home</div>
 					<div class="item" ui-sref="nav.favourites" menu-close>Favourites</div>
-					<div ng-repeat="(key,value) in searchstore" >
-						<div ng-hide="key=='search'" class="item ibm-icon" ng-click="searchstore.search(key)" menu-close>
-							<img ng-src="images/icons/{{key}}.png">
-							{{key}}
+					<div ng-repeat="page in pages" >
+						<div class="item ibm-icon" ng-click="search(page)" menu-close>
+							<img ng-src="images/icons/{{page}}.png">
+							{{page}}
 						</div>
 					</div>
 				</div>

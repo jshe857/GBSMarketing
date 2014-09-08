@@ -1,32 +1,32 @@
-<ion-view>
+<ion-view title="Experience IBM">
   <ion-content has-header="true">
     <div class="row" style="min-height:100%">
-      <div class=" col col-33 side-left" ng-class="style.theme">
+      <div class=" col col-33 side-left" ng-class="page.theme">
         <div class="title header">
-          {{title}}
-          <img ng-src="images/icons/{{title}}.png" width="80px">
+          {{page.title}}
+          <img ng-src="images/icons/{{page.title}}.png" width="80px">
         </div>
         <div>
-        <ul>
+<!--         <ul style="padding-bottom:40px; margin-top:-100px"> -->
+		<ul>
        	<li class="button-container" ui-sref="nav.category.introduction">
-       	  <div class="button-circle left-align" ng-class="[style.theme, state.includes('nav.category.introduction') ? 'selected':'']"></div> 
+       	  <div class="button-circle left-align" ng-class="[page.theme, state.includes('nav.category.introduction') ? 'selected':'']"></div> 
           <div class="button-side"
-          ng-class="[style.theme, state.includes('nav.category.introduction') ? 'button-outline':'']"
-          style="display: inline-block; vertical-align: middle;">
+          ng-class="[page.theme, state.includes('nav.category.introduction') ? 'button-outline':'']">
             An Introduction
           </div>
         </li>
         <li class="button-container" ui-sref="nav.category.perspectives">
-       	  <div class="button-circle left-align" ng-class="[style.theme,state.includes('nav.category.perspectives') ? 'selected':'']"></div> 
+       	  <div class="button-circle left-align" ng-class="[page.theme,state.includes('nav.category.perspectives') ? 'selected':'']"></div> 
        	  <div class="button-side" 
-          ng-class="[style.theme, state.includes('nav.category.perspectives') ? 'button-outline':'']">
+          ng-class="[page.theme, state.includes('nav.category.perspectives') ? 'button-outline':'']">
             Perspectives
           </div>
         </li>
         <li class="button-container" ui-sref="nav.category.journeys">
-       	  <div class="button-circle left-align" ng-class="[style.theme,state.includes('nav.category.journeys') ? 'selected':'']"></div> 
+       	  <div class="button-circle left-align" ng-class="[page.theme,state.includes('nav.category.journeys') ? 'selected':'']"></div> 
        	  <div class="button-side" 
-          ng-class="[style.theme,state.includes('nav.category.journeys') ? 'button-outline':'']">
+          ng-class="[page.theme,state.includes('nav.category.journeys') ? 'button-outline':'']">
             Client Journeys
           </div>
         </li>

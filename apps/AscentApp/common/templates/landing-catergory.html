@@ -1,0 +1,39 @@
+<div class="col">
+		<div class="landing-button title button button-balanced big-button"
+			ng-class="pressed==1 ? 'translateUp' : ''" ng-click="pressed=1">
+			Experience <br> Industry <br>
+			<i class="icon ion-chevron-down indicator" ng-class="pressed==1 ? '' : 'invisible'"></i>
+		</div>
+		<div class="drop-container"
+			ng-class="pressed == 1 ? 'fadeInDown' : 'invisible'">
+			<div class="dot-container">
+			<div class="dot"></div>
+			<div class="dot"></div>
+			<div class="dot"></div>
+			</div>
+			<p>
+			<div class="landing-button title button button-balanced small-button"
+				ng-click="search('Banking')">
+				<img src="images/icons/Banking.png" height="55" width="55"
+					style="border-radius: 45px; margin: 14 0 -10 0"> Banking
+			</div>
+			<div class="landing-button title button button-balanced small-button"
+				ng-click="search('Government')">
+				<img src="images/icons/Government.png" height="55" width="55"
+					style="border-radius: 45px; margin: 14 0 -10 0"> Government
+			</div>
+			</p>
+			<p>
+			<div class="landing-button title button button-balanced small-button"
+				ng-click="search('Telecomms')">
+				<img src="images/icons/Telecomms.png" height="55" width="55"
+					style="border-radius: 45px; margin: 14 0 -10 0"> Telecomms
+			</div>
+			<div class="landing-button title button button-balanced small-button"
+				ng-click="search('Mining')">
+				<img src="images/icons/Mining.png" height="55" width="55"
+					style="border-radius: 45px; margin: 14 0 -10 0"> Mining
+			</div>
+			</p>
+		</div>
+	</div>

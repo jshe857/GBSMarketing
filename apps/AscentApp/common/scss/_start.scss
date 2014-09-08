@@ -1,6 +1,8 @@
-$big-size: 300px;
+$big-size: 230px;
 $small-size: 120px;
-$icon-size:45px;
+/*$small-size: 110px;*/
+/*$icon-size:45px;*/
+$icon-size:35px;
 .landing {
 	background:url('../images/lighthouse.jpg');
 	background-size:100% 100%;
@@ -23,10 +25,13 @@ $icon-size:45px;
 		flex-direction:column; 
     	text-align: center;
 		border-color:white;
+		z-index:999;
 	}
 	.landing-button.big-button {	
 		height:40%;
 		width:85%;
+		/*height:$big-size;
+		width: $big-size;*/
 		border-radius:100%;
 		border-width:10px;
 		transition: all 0.5s ease;
@@ -38,11 +43,13 @@ $icon-size:45px;
 	.landing-button.small-button {
 		display:inline-block;
 		font-size:12px;
+		/*font-size:10px;*/
 		height:$small-size;
 		width:$small-size;
-		border-radius:$small-size;
+		border-radius:100%;
 		border-width:$small-size /20;
 		z-index:20;
+		margin: 14 0 -10 0;
 	}
 	
 	.indicator {

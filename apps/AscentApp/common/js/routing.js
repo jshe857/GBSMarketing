@@ -52,6 +52,14 @@ var ascent = angular.module('Ascent', [ 'ionic' ]).config(
 								controller : 'DetailsCtrl'
 							}
 						}
+					}).state('nav.details-image',{
+						url: '/details-image?media',
+						views : {
+							'menuContent' : {
+								templateUrl : 'templates/details-image.html',
+								controller : 'DetailsCtrl'
+							}
+						}
 					}).state('nav.search', {
 						url: '/search',
 						views : {

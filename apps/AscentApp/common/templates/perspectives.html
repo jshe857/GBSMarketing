@@ -1,14 +1,11 @@
 <div class="preview-content">
 <ion-slide-box style="height:60%;" does-continue="true">
-  <ion-slide>
-    <div style="background:orange; height:100%"><h1>Orange</h1></div>
-  </ion-slide>
-  <ion-slide>
-    <div style="background:yellow; height:100%"><h1>YELLOW</h1></div>
-  </ion-slide>
-  <ion-slide>
-    <div style="background:pink; height:100%"><h1>PINK</h1></div>
+  <ion-slide ng-repeat="image in infographics| filter:key:strict">
+    <img ng-click="details(image)" width="100%" ng-src="{{image.previewUrl}}">
   </ion-slide>
 </ion-slide-box>
-<div class="title header-bar" ng-class="style.theme">Leadership and Subject Matter Experts</div>
+	<div class="title header-bar" ng-class="page.theme">Leadership and Subject Matter Experts</div>
+	<div class="card col col-33" ng-click="getDetails(row)"
+		ng-repeat="row in list">
+	</div>
 </div>
