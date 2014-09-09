@@ -1,18 +1,51 @@
 <ion-view title="{{media.title}}">
-<ion-nav-buttons ng-if="prevState" side="left">
+<ion-nav-buttons side="left">
 <a ng-click="back();" class="button button-icon ion-ios7-arrow-back">{{prevState}}</a>
 </ion-nav-buttons>
 <ion-content has-header="true">
-<social-bar></social-bar>
-<div class="row ">
+
+<div class="social-bar row">
+	<div class="col" style="margin-left: 6%" ng-click="social.favourite(media)">
+		<i class="icon ion-ios7-heart energized"></i>
+		Favourite
+	</div>
+	<div class="col">
+		<a class="socialite twitter-share" href="http://twitter.com/share"
+			data-url="http://socialitejs.com"> <i
+			class="icon ion-social-twitter positive"></i>
+		</a> Tweet
+	</div>
+	<div class="col">
+		<a class="socialite linkedin-share" href="http://linkedin.com/share"
+			data-url="http://socialitejs.com"> <i
+			class="icon ion-social-linkedin" style="color: #007bb1"></i>
+		</a> Share Link
+	</div>
+	<div class="col">
+		<a class="socialite facebook-like" href="http://facebook.com/share"
+			data-url="http://socialitejs.com"> <i
+			class="icon ion-social-facebook"
+			style="background: #395699; color: white"></i>
+		</a> Post
+	</div>
+	<div class="col">
+		<a> <i class="icon ion-ios7-email energized"></i> Email
+		</a>
+	</div>
+	<div class="col" style="margin-right: 6%">
+		<i ng-click="social.lead(media)" class="icon ion-arrow-graph-up-right balanced"></i> Share Lead
+	</div>
+</div>
+
+<div class="row" style="margin-top:20px">
 	<a class="col media" ng-href="{{media.mediaUrl}}" ng-style="styleVideo()" style="min-height:80%" target="_self">
 			<img ng-if="media.bodyText" class="play-icon" width="250px" src="images/play.png">
 			<img ng-if="!media.bodyText" ng-src={{media.mediaUrl}}>
 <!-- 				<iframe width ="100%" height="100%" ng-src="{{media.mediaUrl}}" allowfullscreen frameborder="0"></iframe> -->
 	</a>
-	<div ng-if="media.bodyText" class="col col-33">
+	<div ng-if="media.bodyText" class="col col-33" style="padding-left:10px; padding-right:10px">
 		<ion-scroll>
-		<div style="height:10px; background:#ABCDEF; margin: 35px 0 20px 0"></div>
+		<div style="height:10px; background:#00AFDA; margin: 35px 0 20px 0"></div>
 		<div style="text-align:center">
 			<img ng-src="{{media.thumbnailUrl}}" width="50%">
 		</div>
@@ -22,7 +55,7 @@
 			{{media.title}}
 		</div>
 		<div style="height:2px; background:#BBB; text-align:justify; margin: 0 0 20px 0"></div>
-		<p class="article-body" style="padding-left:10px; padding-right:10px">
+		<p class="article-body" >
 		{{media.bodyText}}
 		</p>
 		</div>

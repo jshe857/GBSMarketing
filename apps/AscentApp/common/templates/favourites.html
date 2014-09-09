@@ -1,4 +1,4 @@
-<ion-view> <ion-content has-header="true">
+<ion-view title="Experience IBM"> <ion-content has-header="true">
 <div class="row" style="min-height: 100%;">
 	<div class=" col col-33 side-left positive">
 		<div style="padding-top:20px;">
@@ -6,8 +6,8 @@
 			<div class="title header" style="padding-top:7%; padding-bottom:12%;">&nbsp;Favourites</div>
 		</div>
 		<ul>
-			<li ng-repeat="row in list">
-				<div class="button-side positive" style="font-size:14px;font-family:Arial; margin: 2px 0; padding-left:0px; text-align:center; width:100%" ng-click="getDetails(row)">{{row.company}} : {{row.title}}</div>
+			<li ng-repeat="row in favourites">
+				<div class="button-side positive" style="font-size:14px;font-family:Arial; margin: 2px 0; padding-left:0px; text-align:center; width:100%" ng-click="details(row)">{{row.company ? row.company+':' :''}}  {{row.title}}</div>
 			</li>
 		</ul>
 	</div>

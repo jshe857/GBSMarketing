@@ -1,4 +1,40 @@
-ascent.service('SocialService', function($ionicPopup) {
+ascent.factory('SocialShare', function($ionicPopup, ContentFactory) {
+	//	<button onclick="window.plugins.socialsharing.shareViaTwitter('Message via Twitter')">message via Twitter</button>
+	//	<button onclick="window.plugins.socialsharing.shareViaTwitter('Message and link via Twitter', null /* img */, 'http://www.x-services.nl')">msg and link via Twitter</button>
+	//	<button onclick="window.plugins.socialsharing.shareViaFacebook('Message via Facebook', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via Facebook (with errcallback)</button>
+	//	
+	var social={};
+	social.favourite = function(media) {
+		var popup = $ionicPopup.confirm({
+			title: '<i style="font-size:40px" class="icon ion-ios7-heart energized"></i>',
+			template: '<p style="text-align:center">Would you like to add this article to your favourites page?</p>',
+			okType: "button-positive button-round",
+			cancelType: "button-positive button-round"
+		});
+		popup.then(function(res) {
+			if (res) {
+				ContentFactory.favourites.add(media);
+			}
+		});
+	};
+	social.tweet = function(media){};
+	social.email = function(media){};
+	social.post = function(media){};
+	social.share = function(media){};
+	social.lead = function(media){
+		var popup = $ionicPopup.confirm({
+			title: 'Share A Lead',
+			templateUrl: 'templates/dataform.html',
+			okText: "Send",
+			okType: "button-balanced button-round",
+			cancelType: "button-balanced button-round"
+		});
+		popup.then(function(res) {
+			if (res) {
+			}
+		});
+	};
+	return social;
 
 }).service('EmailService', function($window) {
 	this.send = function(form) {
@@ -41,6 +77,7 @@ ascent.service('SocialService', function($ionicPopup) {
 		favourites = [];
 	}
 	favourites.add = function(media) {
+		console.log(media.title +" : " + this.indexOf(media));
 		if (this.indexOf(media) == -1) {
 			this.push(media);
 			localStorage.setItem(favouritesKey, angular.toJson(this));
